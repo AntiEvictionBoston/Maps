@@ -1,0 +1,19 @@
+{
+  "name": "leaflet_map",
+  "version": "1.0.0",
+  "description": "A leaflet map to show evictions in Boston",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antievictionboston/leafletmap.git"
+  },
+  "author": "Alice Pote and the Boston Eviction Mapping Project",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/antievictionboston/leafletmap/issues"
+  },
+  "homepage": "https://github.com/antievictionboston/leafletmap#readme"
+}
