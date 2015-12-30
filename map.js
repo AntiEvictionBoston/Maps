@@ -5,13 +5,13 @@ var mapOptions = {
 }
 
 
-var map = L.map('map').setView([42.35, -71.05], 13);
+var map = L.map('map').setView([42.37, -71.03], 14);
 L.tileLayer(tileLayer, mapOptions).addTo(map);
 
 var marker = L.marker([51.5, -0.09]).addTo(map);
 var markers = []
 
-var evictions = JSON.parse('evictions.json');
+// var evictions = JSON.parse('evictions.json');
 
 function onMapClick(e) {
     popup
