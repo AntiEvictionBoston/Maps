@@ -1,5 +1,6 @@
 import React from "react";
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
+import EvictionPopup from "components/eviction_popup";
 
 class EvictionMap extends React.Component {
   constructor(options) {
@@ -33,6 +34,9 @@ class EvictionMap extends React.Component {
           map={this.props.map}
           position={[eviction.Latitude, eviction.Longitude]}
           key={index}>
+          <Popup>
+            <EvictionPopup eviction={eviction}/>
+          </Popup>
         </Marker>
       )));
     return markers
