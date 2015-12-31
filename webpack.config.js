@@ -20,7 +20,7 @@ module.exports = {
   },
   output: {
     path: __dirname,
-    filename: 'east_boston_evictions.js',
+    filename: 'east_boston.js',
   },
   module: {
     loaders: [
