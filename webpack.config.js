@@ -20,7 +20,7 @@ module.exports = {
   },
   output: {
     path: __dirname,
-    filename: 'bundle.js',
+    filename: 'east_boston_evictions.js',
   },
   module: {
     loaders: [
