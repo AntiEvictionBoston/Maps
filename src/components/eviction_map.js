@@ -19,13 +19,23 @@ class EvictionMap extends React.Component {
           url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
           attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
         />
+        <div style={{display: 'none'}}>{this.renderEvictions}</div>
+        {this.renderEvictions()}
       </Map>
     );
   }
 
   renderEvictions () {
-    this.props.evictions
-
+    var markers = []
+    this.props.evictions.forEach( (eviction, index) => (
+      markers.push(
+        <Marker
+          map={this.props.map}
+          position={[eviction.Latitude, eviction.Longitude]}
+          key={index}>
+        </Marker>
+      )));
+    return markers
   }
 }
 
