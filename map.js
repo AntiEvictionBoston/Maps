@@ -12,7 +12,9 @@ L.tileLayer(tileLayer, mapOptions).addTo(map);
 var markers = [];
 for (var i = 0; i < eastBostonEvictions.length; i++) {
   eviction = eastBostonEvictions[i];
-  marker = L.marker([eviction.Latitude, eviction.Longitude]).addTo(map);
+  marker = L.marker([eviction.Latitude, eviction.Longitude]);
+  marker.addTo(map);
+  marker.bindPopup(eviction.location)
   markers.push(marker);
 }
 
