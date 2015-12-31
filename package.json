@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "python -m SimpleHTTPServer"
+    "start": "webpack-dev-server --progress --colors --hot",
+    "build": "webpack --progress --profile --colors",
+    "lint": "eslint ./src; exit 0"
   },
   "repository": {
     "type": "git",
