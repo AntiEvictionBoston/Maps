@@ -5,6 +5,10 @@ var webpack = require('webpack'),
   path = require('path'),
   srcPath = path.join(__dirname, 'src');
 
+var isProduction = function () {
+  return process.env.NODE_ENV === 'production';
+};
+
 module.exports = {
   target: 'web',
   cache: true,
@@ -36,8 +40,8 @@ module.exports = {
     }),
     new webpack.NoErrorsPlugin()
   ],
-  debug: true,
-  devtool: 'eval-cheap-module-source-map',
+  debug: isProduction() ? false : true,
+  devtool: isProduction() ? '' : 'eval-cheap-module-source-map',
   devServer: {
     historyApiFallback: true
   }
