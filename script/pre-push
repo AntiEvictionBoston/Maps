@@ -2,7 +2,15 @@
 
 current_branch=$(git rev-parse --abbrev-ref HEAD)
 if [[ $current_branch == 'master' ]]; then
+    unset GIT_DIR
+    echo "here"
+    if [ -d "/tmp/east_boston_utility" ]; then
+        sudo rm -r /tmp/east_boston_utility
+    fi
+    echo "here"
+    git clone git@github.com:AntiEvictionBoston/utility.git /tmp/east_boston_utility
     webpack
-    cp east_boston.js ../utility/
-    cd ../utility && git add . && git commit -am "updated east_boston.js" && git push origin master
+    cp east_boston.js /tmp/east_boston_utility
+    cd /tmp/east_boston_utility && git add . && git commit -am "updated east_boston.js" && git push origin master
+    sudo rm -r /tmp/east_boston_utility
 fi
