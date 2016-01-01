@@ -15,8 +15,9 @@ npm start
 ##Updating the utility repo
 
 There's a [utility repo](https://github.com/AntiEvictionBoston/utility)
-which we're using as a makeshift CDN. In this repo there's
-a [script](./script/pre-push) which will automatically update this repo.
+which we're using as a makeshift CDN. There's
+a [script](./script/pre-push) which will automatically update the utility
+repo.
 
 Just do:
 
