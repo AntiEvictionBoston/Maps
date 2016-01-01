@@ -22,5 +22,5 @@ when you push to master.
 Just do:
 
 ```
-ln -s script/pre-push .git/hooks/pre-push
+cp script/pre-push .git/hooks/pre-push
 ```
