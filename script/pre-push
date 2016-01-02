@@ -31,6 +31,7 @@ while read lref lsha rref rsha; do
     esac
 done
 
+
 # if we get here it's OK to try the push, but first...
 if $to_master; then
     unset GIT_DIR # make git work normally again
