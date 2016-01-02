@@ -17,14 +17,12 @@ npm start
 There's a [utility repo](https://github.com/AntiEvictionBoston/utility)
 which we're using as a makeshift CDN. There's
 a [script](./script/pre-push) which will automate updating the utility
-repo.
-
-Just do:
+repo if you add it as a `pre-push` hook in `.git`. These aren't copied
+between git repos, so you need to do:
 
 ```
-./script/pre-push
+cp script/pre-push .git/hooks/pre-push
 ```
 
-(this was supposed to be a `pre-push` git hook, but it turns out
-committing to another repo in a pre-push hook is wacky? anyway, it expects
-the utility repo to be cloned at `../utility`)
+Then it should work! It expects the utility repo to be at `../utility`,
+relative to the directory that the map is cloned in.
