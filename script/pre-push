@@ -36,7 +36,7 @@ if $to_master; then
     unset GIT_DIR # make git work normally again
     # set -e      # might want this to make sure any failures => stop push
     webpack
-    cp bundle.js ../utility
-    cd ../utility && git add bundle.js && git commit -m "updated east_boston.js"
+    cp east_boston.js ../utility
+    cd ../utility && git add east_boston.js && git commit -m "updated east_boston.js"
 fi
 exit 0 # allow push to proceed
