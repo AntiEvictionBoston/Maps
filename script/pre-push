@@ -1,8 +1,42 @@
 #!/bin/bash
 
-current_branch=$(git rev-parse --abbrev-ref HEAD)
-if [[ $current_branch == 'master' ]]; then
-    npm run-script build
-    cp east_boston.js ../utility
-    eval 'cd ../utility && git add east_boston.js && git commit -m "updated east_boston.js" && git push origin master'
+# current_branch=$(git rev-parse --abbrev-ref HEAD)
+# if [[ $current_branch == 'master' ]]; then
+#     npm run-script build
+#     cp east_boston.js ../utility
+#     eval 'cd ../utility && git add east_boston.js && git commit -m "updated east_boston.js" && git push origin master'
+# fi
+#! /bin/bash
+
+. git-sh-setup  # for require_clean_work_tree() and die()
+
+check_push_to_master()
+{
+    # we're pushing to remote "master"; reject if
+    # the work tree is not clean or is not at the
+    # commit-ID ($1) being pushed
+    local headsha pushsha
+
+    require_clean_work_tree 'push to master'
+    headsha=$(git rev-parse HEAD)
+    pushsha=$1
+    [ $headsha = $pushsha ] ||
+        die "HEAD commit $headsha does not match push to master $pushsha"
+}
+
+to_master=false
+while read lref lsha rref rsha; do
+    case $rref in
+    refs/heads/master) check_push_to_master $lsha; to_master=true;;
+    esac
+done
+
+# if we get here it's OK to try the push, but first...
+if $to_master; then
+    unset GIT_DIR # make git work normally again
+    # set -e      # might want this to make sure any failures => stop push
+    webpack
+    cp bundle.js ../utility
+    cd ../utility && git add bundle.js && git commit -m "updated east_boston.js"
 fi
+exit 0 # allow push to proceed
