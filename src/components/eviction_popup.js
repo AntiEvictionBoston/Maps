@@ -8,8 +8,16 @@ class EvictionPopup extends React.Component {
   render () {
     return (
       <div className="eviction-popup">
-        {this.props.eviction.location}
+        {this.renderImage()}
       </div>
+    );
+  }
+
+  renderImage () {
+    return (
+      <img
+        src={this.props.eviction.content.imageURL}
+      />
     );
   }
 }
