@@ -17,6 +17,7 @@ class EvictionPopup extends React.Component {
     return (
       <img
         src={this.props.eviction.content.imageURL}
+        width="300px"
       />
     );
   }
