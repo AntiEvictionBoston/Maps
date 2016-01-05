@@ -8,7 +8,11 @@ class EvictionPopup extends React.Component {
   render () {
     return (
       <div className="eviction-popup">
+        <h3>
+          {this.props.eviction.location}
+        </h3>
         {this.renderImage()}
+        {this.renderNarrative()}
       </div>
     );
   }
@@ -19,6 +23,14 @@ class EvictionPopup extends React.Component {
         src={this.props.eviction.content.imageURL}
         width="300px"
       />
+    );
+  }
+
+  renderNarrative () {
+    return (
+      <p>
+        {this.props.eviction.content.narrative}
+      </p>
     );
   }
 }
