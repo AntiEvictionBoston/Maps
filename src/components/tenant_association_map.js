@@ -31,11 +31,8 @@ class TenantAssociationMap extends React.Component {
       markers.push(
         <Marker
           map={this.props.map}
-          position={[eviction.Latitude, eviction.Longitude]}
+          position={[association.Latitude, association.Longitude]}
           key={index}>
-          <Popup>
-            <EvictionPopup eviction={eviction}/>
-          </Popup>
         </Marker>
       )));
     return markers

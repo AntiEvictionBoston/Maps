@@ -22,7 +22,7 @@ let tenantAssociationMap =
     zoom={14}
     associations={tenantAssociations} />
 
-render(basicFakeDataMap, document.getElementById('map'));
+render(tenantAssociationMap, document.getElementById('map'));
 
 // render((
 //   <EvictionMap
