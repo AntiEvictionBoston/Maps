@@ -20,14 +20,14 @@ class TenantAssociationMap extends React.Component {
           url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
           attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
         />
-        {this.renderAssociations()}
+        {this.renderEvictions()}
       </Map>
     );
   }
 
-  renderAssociations () {
+  renderEvictions () {
     var markers = []
-    this.props.associations.forEach( (association, index) => (
+    this.props.evictions.forEach( (eviction, index) => (
       markers.push(
         <Marker
           map={this.props.map}
@@ -42,4 +42,5 @@ class TenantAssociationMap extends React.Component {
   }
 }
 
-export default TenantAssociationMap;
+export default EvictionMap;
+
