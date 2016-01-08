@@ -1,5 +1,6 @@
 var tenantAssociations = [
-  { address: "173-177 Maverick St.",
+  {
+    address: "173-177 Maverick St.",
     owner: "Maverick Street Realty",
     units: 7,
     Latitude: 42.369521,

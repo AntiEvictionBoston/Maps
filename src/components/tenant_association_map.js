@@ -1,6 +1,5 @@
 import React from "react";
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
-import EvictionPopup from "components/eviction_popup";
 
 class TenantAssociationMap extends React.Component {
   constructor(props) {
