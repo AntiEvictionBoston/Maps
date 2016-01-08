@@ -3,8 +3,8 @@ import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import EvictionPopup from "components/eviction_popup";
 
 class EvictionMap extends React.Component {
-  constructor(options) {
-    super(options);
+  constructor(props) {
+    super(props);
   }
 
   static propTypes = {
