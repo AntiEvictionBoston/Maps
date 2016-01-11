@@ -1,5 +1,6 @@
 import React from "react";
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
+import TenantPopup from "./tenant_association_popup";
 
 class TenantAssociationMap extends React.Component {
   constructor(props) {
@@ -32,6 +33,9 @@ class TenantAssociationMap extends React.Component {
           map={this.props.map}
           position={[association.Latitude, association.Longitude]}
           key={index}>
+          <Popup>
+            <TenantPopup association={association} />
+          </Popup>
         </Marker>
       )));
     return markers
