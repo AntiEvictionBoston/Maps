@@ -12,21 +12,25 @@ class TenantPopup extends React.Component {
           {this.props.association.address}
         </h2>
         <h3>
-          {this.props.association.owner}
+          Owner: {this.props.association.owner}
         </h3>
-        {this.renderImages()}
+        <div>
+          {this.renderImages()}
+        </div>
       </div>
     );
   }
 
   renderImages () {
-    this.props.association.images.forEach((image, index) => {
-      return (
+    var images = [];
+    this.props.association.images.forEach((image, index) => (
+      images.push (
         <img
+          width="300px"
           src={image}
           key={index} />
-      );
-    });
+      )));
+    return images;
   }
 }
 
