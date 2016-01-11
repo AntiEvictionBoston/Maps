@@ -26,7 +26,7 @@ class TenantAssociationMap extends React.Component {
   }
 
   renderAssociations () {
-    var markers = []
+    var markers = [];
     this.props.associations.forEach( (association, index) => (
       markers.push(
         <Marker
