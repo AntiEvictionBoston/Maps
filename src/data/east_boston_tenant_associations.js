@@ -1,3 +1,5 @@
+import photos from "../images/images";
+
 var tenantAssociations = [
   {
     address: "173-177 Maverick St.",
