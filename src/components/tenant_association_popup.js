@@ -17,6 +17,7 @@ class TenantPopup extends React.Component {
         <div>
           {this.renderImages()}
         </div>
+        {this.renderVideo()}
       </div>
     );
   }
@@ -32,6 +33,19 @@ class TenantPopup extends React.Component {
       )));
     return images;
   }
+
+  renderVideo () {
+    if (this.props.association.video) {
+      return (
+        <a
+          href={this.props.association.video}
+          target="_blank" >
+          A video about the struggle at the this address.
+        </a>
+      );
+    }
+  }
+
 }
 
 export default TenantPopup;
