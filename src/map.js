@@ -23,9 +23,3 @@ let tenantAssociationMap =
     associations={tenantAssociations} />
 
 render(tenantAssociationMap, document.getElementById('map'));
-
-// render((
-//   <EvictionMap
-//     position={[42.37, -71.03]}
-//     zoom={14}
-//     evictions={eastBostonEvictions} />), document.getElementById('map'));
