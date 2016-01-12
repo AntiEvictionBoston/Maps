@@ -9,7 +9,8 @@ var tenantAssociations = [
     Longitude: -71.037244,
     images: [
       photos.maverickStreet173
-    ]
+    ],
+    video: "https://www.youtube.com/watch?v=uinevl-LnTI"
   },
   {
     address: "142 Gove St.",
@@ -89,7 +90,7 @@ var tenantAssociations = [
     Latitude: 42.377834,
     Longitude: -71.034292,
     images: [
-      photos.bookSt
+      photos.brooksSt
     ]
   }
 ]
