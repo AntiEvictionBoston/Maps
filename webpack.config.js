@@ -24,7 +24,7 @@ module.exports = {
   },
   output: {
     path: __dirname,
-    filename: 'east_boston.js',
+    filename: 'maps.js',
   },
   module: {
     loaders: [
