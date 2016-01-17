@@ -1,6 +1,7 @@
 import React from "react";
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import TenantPopup from "./tenant_association_popup";
+import SidebarContainer from "./sidebar";
 
 class TenantAssociationMap extends React.Component {
   constructor(props) {
@@ -15,13 +16,16 @@ class TenantAssociationMap extends React.Component {
 
   render() {
     return (
-      <Map center={this.props.position} zoom={this.props.zoom}>
-        <TileLayer
-          url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
-          attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
-        />
-        {this.renderAssociations()}
-      </Map>
+      <div>
+        <Map center={this.props.position} zoom={this.props.zoom}>
+          <TileLayer
+            url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
+            attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
+          />
+          {this.renderAssociations()}
+        </Map>
+        <SidebarContainer />
+      </div>
     );
   }
 
