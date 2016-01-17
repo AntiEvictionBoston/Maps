@@ -3,7 +3,7 @@ import React from "react";
 class TenantPopup extends React.Component {
   static propTypes = {
     association: React.PropTypes.object.isRequired
-  }
+  };
 
   render () {
     return (

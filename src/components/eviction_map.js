@@ -11,7 +11,7 @@ class EvictionMap extends React.Component {
     position:     React.PropTypes.array.isRequired,
     zoom:         React.PropTypes.number.isRequired,
     evictions:    React.PropTypes.array.isRequired
-  }
+  };
 
   render() {
     return (

@@ -3,7 +3,7 @@ import React from "react";
 class EvictionPopup extends React.Component {
   static propTypes = {
     eviction: React.PropTypes.object.isRequired
-  }
+  };
 
   render () {
     return (

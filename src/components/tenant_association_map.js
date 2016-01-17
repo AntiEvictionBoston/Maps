@@ -11,7 +11,7 @@ class TenantAssociationMap extends React.Component {
     position:     React.PropTypes.array.isRequired,
     zoom:         React.PropTypes.number.isRequired,
     associations: React.PropTypes.array.isRequired
-  }
+  };
 
   render() {
     return (
