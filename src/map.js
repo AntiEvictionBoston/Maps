@@ -22,4 +22,4 @@ let tenantAssociationMap =
     zoom={14}
     associations={tenantAssociations} />
 
-render(tenantAssociationMap, document.getElementById('map'));
+render(tenantAssociationMap, document.getElementById('east_boston_tenant_association_map'));
