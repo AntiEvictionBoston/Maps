@@ -27,4 +27,4 @@ cp script/pre-push .git/hooks/pre-push
 Then it should work! It expects the utility repo to be at `../utility`,
 relative to the directory that the map is cloned in.
 
-The map is at [](antievictionboston.github.io/map.html).
+The map is at [](antievictionboston.github.io/map.html) (for now).
