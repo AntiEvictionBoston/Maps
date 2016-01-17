@@ -27,6 +27,6 @@ if $to_master; then
     unset GIT_DIR
     npm run-script build
     cp east_boston.js ../utility
-    cd ../utility && git pull && git add east_boston.js && git commit -m "updated east_boston.js" && git push origin master
+    cd ../utility && git pull && git add east_boston.js maps.js && git commit -m "updated east_boston.js" && git push origin master
 fi
 exit 0 # allow push to proceed
