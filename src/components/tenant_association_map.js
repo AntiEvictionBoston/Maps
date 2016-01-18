@@ -1,7 +1,7 @@
 import React from "react";
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import TenantPopup from "./tenant_association_popup";
-import SidebarContainer from "./sidebar";
+import Sidebar from "./sidebar";
 
 class TenantAssociationMap extends React.Component {
   constructor(props) {
@@ -16,7 +16,7 @@ class TenantAssociationMap extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="map-container">
         <Map center={this.props.position} zoom={this.props.zoom}>
           <TileLayer
             url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
@@ -24,7 +24,7 @@ class TenantAssociationMap extends React.Component {
           />
           {this.renderAssociations()}
         </Map>
-        <SidebarContainer />
+        <Sidebar />
       </div>
     );
   }
