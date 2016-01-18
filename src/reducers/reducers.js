@@ -19,3 +19,5 @@ function updateMapState (state = initialState, action) {
       return state;
   }
 }
+
+export default updateMapState;
