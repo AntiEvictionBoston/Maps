@@ -1,13 +1,10 @@
 import React from "react";
 import { render } from "react-dom";
-import Sidebar from "react-sidebar";
+import { Sidebar } from "react-sidebar";
 
 class SidebarContainer extends React.Component {
   constructor(props) {
     super(props);
-  }
-
-  static propTypes {
   }
 
   render () {
