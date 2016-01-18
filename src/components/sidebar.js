@@ -1,6 +1,5 @@
 import React from "react";
 import { render } from "react-dom";
-import { Sidebar } from "react-sidebar";
 
 class SidebarContainer extends React.Component {
   constructor(props) {
@@ -13,7 +12,9 @@ class SidebarContainer extends React.Component {
 
   render () {
     return (
-      <h1>Some content!</h1>
+      <div id="map-sidebar">
+        <h1>Some content!</h1>
+      </div>
     );
   }
 }
