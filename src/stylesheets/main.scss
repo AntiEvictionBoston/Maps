@@ -1,1 +1,6 @@
 @import "leaflet/leaflet";
+
+.leaflet-container {
+  height: 98vh;
+  width: device-width;
+}
