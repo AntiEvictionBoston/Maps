@@ -6,6 +6,8 @@ import eastBostonEvictions from "data/east_boston_evictions";
 import exampleEvictionContent from "data/example_eviction_content";
 import tenantAssociations from "data/east_boston_tenant_associations";
 
+require("./stylesheets/main.scss");
+
 for (var eviction of eastBostonEvictions) {
   eviction.content = exampleEvictionContent;
 }

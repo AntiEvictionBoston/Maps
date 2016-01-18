@@ -7,13 +7,13 @@ class SidebarContainer extends React.Component {
     super(props);
   }
 
+  static propTypes = {
+    foo:    React.PropTypes.object
+  };
+
   render () {
     return (
-      <Sidebar
-        sidebar="test"
-        open="true" >
-        <h1>Some content!</h1>
-      </Sidebar>
+      <h1>Some content!</h1>
     );
   }
 }
