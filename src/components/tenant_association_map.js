@@ -24,7 +24,10 @@ class TenantAssociationMap extends React.Component {
           />
           {this.renderAssociations()}
         </Map>
-        <Sidebar />
+        <Sidebar>
+          <h1> wow! </h1>
+          some stuff!
+        </Sidebar>
       </div>
     );
   }
