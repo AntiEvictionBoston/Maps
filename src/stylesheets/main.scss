@@ -2,5 +2,13 @@
 
 .leaflet-container {
   height: 98vh;
-  width: device-width;
+  width: 80%;
+  float: left;
+}
+
+#map-container {
+  #map-sidebar {
+    float: right;
+    width: 20%;
+  }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 
-class SidebarContainer extends React.Component {
+class Sidebar extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -14,9 +14,10 @@ class SidebarContainer extends React.Component {
     return (
       <div id="map-sidebar">
         <h1>Some content!</h1>
+        Hey there! just filling this in.
       </div>
     );
   }
 }
 
-export default SidebarContainer;
+export default Sidebar;
