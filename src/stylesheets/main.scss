@@ -1,14 +1,23 @@
 @import "leaflet/leaflet";
 
-.leaflet-container {
-  height: 98vh;
-  width: 80%;
-  float: left;
+@media screen and (max-width: 768px){
+  #map-container {
+    #map-sidebar {
+    }
+  }
 }
 
-#map-container {
-  #map-sidebar {
-    float: right;
-    width: 20%;
+@media screen and (min-width: 769px){
+  #map-container {
+    #map-sidebar {
+      width: 20%;
+      float: right;
+    }
+  }
+
+  .leaflet-container {
+    height: 98vh;
+    width: 80%;
+    float: left;
   }
 }
