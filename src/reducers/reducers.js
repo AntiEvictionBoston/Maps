@@ -11,6 +11,10 @@ function mapState (state = initialState, action) {
       return Object.assign({}, state, {
         focusedStory: action.storyId;
       });
+    case SET_STORIES:
+      return Object.assign({}, state, {
+        stories: action.stories;
+      });
     default:
       return state;
   }
