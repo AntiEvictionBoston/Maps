@@ -5,7 +5,7 @@ const initialState = {
   stories: []
 }
 
-function mapState (state = initialState, action) {
+function updateMapState (state = initialState, action) {
   switch (action.type) {
     case SET_FOCUSED_STORY:
       return Object.assign({}, state, {
