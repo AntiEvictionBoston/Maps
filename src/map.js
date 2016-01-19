@@ -6,23 +6,24 @@ import eastBostonEvictions from "data/east_boston_evictions";
 import exampleEvictionContent from "data/example_eviction_content";
 import tenantAssociations from "data/east_boston_tenant_associations";
 import mapStore from "./stores/map_store";
-
 require("./stylesheets/main.scss");
 
-for (var eviction of eastBostonEvictions) {
-  eviction.content = exampleEvictionContent;
+// check for different divs, render the appropriate map
+if (document.getElementById('east_boston_tenant_association_map')) {
+  let tenantAssociationMap =
+    <TenantAssociationMap
+      position={[42.37, -71.03]}
+      zoom={14}
+      associations={tenantAssociations} />
+  render(tenantAssociationMap, document.getElementById('east_boston_tenant_association_map'));
 }
-
-let basicFakeDataMap =
-  <EvictionMap
-    position={[42.37, -71.03]}
-    zoom={14}
-    evictions={eastBostonEvictions} />
-
-let tenantAssociationMap =
-  <TenantAssociationMap
-    position={[42.37, -71.03]}
-    zoom={14}
-    associations={tenantAssociations} />
-
-render(tenantAssociationMap, document.getElementById('east_boston_tenant_association_map'));
+else if (document.getElementById('fake_data_map')) {
+  for (var eviction of eastBostonEvictions) {
+    eviction.content = exampleEvictionContent;
+  }
+  let basicFakeDataMap =
+    <EvictionMap
+      position={[42.37, -71.03]}
+      zoom={14}
+      evictions={eastBostonEvictions} />
+}
