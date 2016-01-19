@@ -1,4 +1,4 @@
-import * from "../actions/actions";
+import * as actions from "../actions/actions";
 
 const initialState = {
   focusedStory: undefined,
@@ -7,13 +7,13 @@ const initialState = {
 
 function updateMapState (state = initialState, action) {
   switch (action.type) {
-    case SET_FOCUSED_STORY:
+    case actions.SET_FOCUSED_STORY:
       return Object.assign({}, state, {
-        focusedStory: action.storyId;
+        focusedStory: action.storyId
       });
-    case SET_STORIES:
+    case actions.SET_STORIES:
       return Object.assign({}, state, {
-        stories: action.stories;
+        stories: action.stories
       });
     default:
       return state;
