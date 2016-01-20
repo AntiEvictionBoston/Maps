@@ -7,7 +7,6 @@ import eastBostonEvictions from "data/east_boston_evictions";
 import exampleEvictionContent from "data/example_eviction_content";
 import tenantAssociations from "data/east_boston_tenant_associations";
 import mapStore from "./stores/map_store";
-import * as actions from "./actions/actions";
 require("./stylesheets/main.scss");
 
 let store = mapStore;

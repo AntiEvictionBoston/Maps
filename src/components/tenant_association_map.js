@@ -1,7 +1,9 @@
 import React from "react";
+import { connect } from "react-redux";
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import TenantPopup from "./tenant_association_popup";
 import Sidebar from "./sidebar";
+import * as actions from "../actions/actions";
 
 class TenantAssociationMap extends React.Component {
   constructor(props) {
@@ -49,4 +51,8 @@ class TenantAssociationMap extends React.Component {
   }
 }
 
-export default TenantAssociationMap;
+function select(state) {
+  return state;
+}
+
+export default connect(selecct)(TenantAssociationMap);
