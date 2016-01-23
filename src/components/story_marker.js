@@ -2,7 +2,7 @@ import React from "react";
 import { Marker } from "react-leaflet";
 import * as actions from "../actions/actions";
 
-class TenantMarker extends React.Component {
+class StoryMarker extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -19,9 +19,9 @@ class TenantMarker extends React.Component {
       <Marker
         onClick={this.props.handleOnClick(this.props.index)}
         map={this.props.map}
-        positions={this.props.position} />
+        position={this.props.position} />
     );
   }
 }
 
-export default TenantMarker;
+export default StoryMarker;
