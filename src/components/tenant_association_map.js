@@ -49,10 +49,13 @@ class TenantAssociationMap extends React.Component {
       )));
     return markers
   }
+
+  handleOnMarkerClick (index) {
+
 }
 
 function select(state) {
   return state;
 }
 
-export default connect(selecct)(TenantAssociationMap);
+export default connect(select)(TenantAssociationMap);
