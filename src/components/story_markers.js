@@ -8,24 +8,28 @@ class StoryMarkers extends React.Component {
   }
 
   static propTypes = {
-    stories:    React.propTypes.object,
-    map:        React.propTypes.object
-  }
+    stories:          React.PropTypes.array,
+    map:              React.PropTypes.object,
+    handleOnClick:    React.PropTypes.func
+  };
 
   render () {
     let markers = [];
     this.props.stories.forEach( (story, index) => (
       markers.push(
-        <TenantMarker
+        <StoryMarker
           map={this.props.map}
           index={index}
           position={[story.Latitude, story.Longitude]}
-          handleOnClick={i => this.props.dispatch(setFocusedStory(i))}
+          handleOnClick={this.props.handleOnClick}
           key={index}>
-        </TenantMarker>
+        </StoryMarker>
       )));
-    return markers;
+    return (
+      <div id="markers">
+        {markers}
+      </div>);
   }
 }
 
-expor default StoryMarkers;
+export default StoryMarkers;

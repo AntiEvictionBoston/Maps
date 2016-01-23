@@ -1,6 +1,5 @@
 import React from "react";
 import { Marker } from "react-leaflet";
-import * as actions from "../actions/actions";
 
 class StoryMarker extends React.Component {
   constructor(props) {
@@ -17,7 +16,7 @@ class StoryMarker extends React.Component {
   render() {
     return (
       <Marker
-        onClick={this.props.handleOnClick.bind(this.props.index)}
+        onClick={this.props.handleOnClick(this.props.index)}
         map={this.props.map}
         position={this.props.position} />
     );
