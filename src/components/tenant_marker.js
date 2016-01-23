@@ -12,7 +12,7 @@ class TenantMarker extends React.Component {
     index:          React.PropTypes.number.isRequired,
     position:       React.PropTypes.array.isRequired,
     handleOnClick:  React.PropTypes.func.isRequired
-  }
+  };
 
   render() {
     return (

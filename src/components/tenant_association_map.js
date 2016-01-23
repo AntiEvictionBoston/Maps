@@ -1,9 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
-import TenantPopup from "./tenant_association_popup";
+import { Map, Popup, TileLayer } from 'react-leaflet';
+import TenantMarker from "./tenant_marker";
 import Sidebar from "./sidebar";
-import * as actions from "../actions/actions";
+import { setFocusedStory, setStories } from "../actions/actions";
+import tenantAssociations from "../data/east_boston_tenant_associations";
 
 class TenantAssociationMap extends React.Component {
   constructor(props) {
@@ -13,10 +14,18 @@ class TenantAssociationMap extends React.Component {
   static propTypes = {
     position:     React.PropTypes.array.isRequired,
     zoom:         React.PropTypes.number.isRequired,
-    associations: React.PropTypes.array.isRequired
+    stories:      React.PropTypes.array,
+    focusedStory:  React.PropTypes.number,
+    dispatch:     React.PropTypes.func.isRequired
   };
 
+  componentDidMount () {
+    this.props.dispatch(setStories(tenantAssociations));
+    this.props.dispatch(setFocusedStory(0));
+  }
+
   render() {
+    const { dispatch, focusedStory, stories } = this.props;
     return (
       <div id="map-container">
         <Map center={this.props.position} zoom={this.props.zoom}>
@@ -24,7 +33,7 @@ class TenantAssociationMap extends React.Component {
             url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
             attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
           />
-          {this.renderAssociations()}
+          {this.renderStories()}
         </Map>
         <Sidebar>
           <h1> wow! </h1>
@@ -34,28 +43,27 @@ class TenantAssociationMap extends React.Component {
     );
   }
 
-  renderAssociations () {
+  renderStories () {
     var markers = [];
-    this.props.associations.forEach( (association, index) => (
+    this.props.stories.forEach( (story, index) => (
       markers.push(
-        <Marker
+        <TenantMarker
           map={this.props.map}
-          position={[association.Latitude, association.Longitude]}
+          index={index}
+          position={[story.Latitude, story.Longitude]}
+          handleOnClick={i => this.props.dispatch(setFocusedStory(i))}
           key={index}>
-          <Popup>
-            <TenantPopup association={association} />
-          </Popup>
-        </Marker>
+        </TenantMarker>
       )));
-    return markers
+    return markers;
   }
-
-  handleOnMarkerClick (index) {
-
 }
 
-function select(state) {
-  return state;
+function setState (state) {
+  return {
+    stories:      state.stories,
+    focusedStory:  state.storyId
+  }
 }
 
-export default connect(select)(TenantAssociationMap);
+export default connect(setState)(TenantAssociationMap);
