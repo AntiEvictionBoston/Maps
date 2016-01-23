@@ -37,7 +37,7 @@ class StoryContainer extends React.Component {
         <a
           href={this.props.story.video}
           target="_blank" >
-          A video about the struggle at the this address.
+          A video about the struggle at this address.
         </a>
       );
     }
