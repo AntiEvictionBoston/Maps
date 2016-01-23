@@ -28,8 +28,8 @@ class TenantAssociationMap extends React.Component {
           <StoryMarkers
             stories={stories}
             map={this.props.map}
-            handleOnClick={index =>
-              dispatch(setFocusedStory(index))} />
+            handleOnClick={story =>
+              dispatch(setFocusedStory(story))} />
         </Map>
         <Sidebar>
           <h1> wow! </h1>

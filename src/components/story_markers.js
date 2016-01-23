@@ -19,9 +19,9 @@ class StoryMarkers extends React.Component {
       markers.push(
         <StoryMarker
           map={this.props.map}
-          index={index}
           position={[story.Latitude, story.Longitude]}
           handleOnClick={this.props.handleOnClick}
+          story={story}
           key={index}>
         </StoryMarker>
       )));
