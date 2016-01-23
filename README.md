@@ -1,16 +1,27 @@
-#East Boston leaflet map
+#Maps
 
-A map centering on East Boston.
+The maps! They're written with Leaflet and React, and bundled together
+with Webpack.
 
 ##Development
 
-This map uses webpack to bundle up the map, which is written in React
-using es2015. To fiddle with the development version:
+We're using webpack to bundle up the maps, which means you need to install
+a giant pile of things for development. To fiddle with the development
+version do:
 
 ```
 npm install
 npm start
 ```
+
+This starts the hot-reload webpack server. If you want to build the map
+for production (export the bundled webpack JS file) you can do:
+
+```
+npm run-script build
+```
+
+It should be fine on any `npm` >= 3.
 
 ##Updating the utility repo
 
