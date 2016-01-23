@@ -9,7 +9,7 @@ function updateMapState (state = initialState, action) {
   switch (action.type) {
     case actions.SET_FOCUSED_STORY:
       return Object.assign({}, state, {
-        focusedStory: action.storyId
+        focusedStory: action.story
       });
     case actions.SET_STORIES:
       return Object.assign({}, state, {

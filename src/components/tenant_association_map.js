@@ -43,7 +43,7 @@ class TenantAssociationMap extends React.Component {
 function mapState (state) {
   return {
     stories:      state.stories,
-    focusedStory:  state.storyId
+    focusedStory:  state.focusedStory
   }
 }
 
