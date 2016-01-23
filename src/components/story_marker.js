@@ -17,7 +17,7 @@ class StoryMarker extends React.Component {
   render() {
     return (
       <Marker
-        onClick={this.props.handleOnClick.bind(this.props.story)}
+        onClick={this.props.handleOnClick.bind(this, this.props.story)}
         map={this.props.map}
         position={this.props.position} />
     );

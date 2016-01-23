@@ -4,6 +4,7 @@ import { Map, Popup, TileLayer } from 'react-leaflet';
 import Sidebar from "./sidebar";
 import { setFocusedStory } from "../actions/actions";
 import StoryMarkers from "../components/story_markers";
+import StoryContainer from "../components/story_container";
 
 class TenantAssociationMap extends React.Component {
   constructor(props) {
@@ -32,8 +33,7 @@ class TenantAssociationMap extends React.Component {
               dispatch(setFocusedStory(story))} />
         </Map>
         <Sidebar>
-          <h1> wow! </h1>
-          some stuff!
+          <StoryContainer story={focusedStory} />
         </Sidebar>
       </div>
     );
