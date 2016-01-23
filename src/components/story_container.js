@@ -2,18 +2,14 @@ import React from "react";
 import { render } from "react-dom";
 
 class StoryContainer extends React.Component {
-  static propTypes = {
-    association: React.PropTypes.object.isRequired
-  };
-
   render () {
     return (
-      <div className="tenant-association-popup">
+      <div className="tenant-story-popup">
         <h2>
-          {this.props.association.address}
+          {this.props.story.address}
         </h2>
         <h3>
-          Owner: {this.props.association.owner}
+          Owner: {this.props.story.owner}
         </h3>
         <div>
           {this.renderImages()}
@@ -25,7 +21,7 @@ class StoryContainer extends React.Component {
 
   renderImages () {
     var images = [];
-    this.props.association.images.forEach((image, index) => (
+    this.props.story.images.forEach((image, index) => (
       images.push (
         <img
           width="300px"
@@ -36,10 +32,10 @@ class StoryContainer extends React.Component {
   }
 
   renderVideo () {
-    if (this.props.association.video) {
+    if (this.props.story.video) {
       return (
         <a
-          href={this.props.association.video}
+          href={this.props.story.video}
           target="_blank" >
           A video about the struggle at the this address.
         </a>
