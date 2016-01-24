@@ -1,4 +1,4 @@
-import photos from "../images/images";
+import { photos } from "../images/images";
 
 var tenantAssociations = [
   {

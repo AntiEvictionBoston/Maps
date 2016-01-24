@@ -1,4 +1,4 @@
-const photos = {
+export const photos = {
   benningtonSt: "https://cdn.rawgit.com/AntiEvictionBoston/utility/master/images/1022_bennington_st.png",
   brooksSt: "https://cdn.rawgit.com/AntiEvictionBoston/utility/master/images/107-11_brooks_st.png",
   maverickStreet219: "https://cdn.rawgit.com/AntiEvictionBoston/utility/master/images/219_maverick_st.png",
@@ -12,4 +12,9 @@ const photos = {
   goveStreet: "https://cdn.rawgit.com/AntiEvictionBoston/utility/master/images/gove_street.png"
 }
 
-export default photos;
+export function eagerLoadImages () {
+  for (let key in Object.keys(photos)) {
+    let i = new Image;
+    i.src = photos[key];
+  }
+}
