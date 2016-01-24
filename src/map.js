@@ -16,8 +16,6 @@ if (document.getElementById('east_boston_tenant_association_map')) {
   let domElement = document.getElementById('east_boston_tenant_association_map');
   let store = createStore(updateMapState);
 
-  let updateMe = store.subscribe(() => console.log(store.getState()));
-
   store.dispatch(setStories(tenantAssociations));
   store.dispatch(setFocusedStory(store.getState().stories[0]));
 
