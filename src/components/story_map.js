@@ -6,7 +6,7 @@ import { setFocusedStory } from "../actions/actions";
 import StoryMarkers from "../components/story_markers";
 import StoryContainer from "../components/story_container";
 
-class TenantAssociationMap extends React.Component {
+class StoryMap extends React.Component {
   constructor(props) {
     super(props);
   }
