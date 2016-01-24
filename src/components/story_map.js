@@ -47,4 +47,4 @@ function mapState (state) {
   }
 }
 
-export default connect(mapState)(TenantAssociationMap);
+export default connect(mapState)(StoryMap);
