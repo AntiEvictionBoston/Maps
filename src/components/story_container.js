@@ -7,17 +7,22 @@ class StoryContainer extends React.Component {
   }
 
   static propTypes = {
-    focusedStory: React.PropTypes.number.isRequired,
-    stories:      React.PropTypes.array.isRequired,
-    story:        React.PropTypes.object.isRequired
+    focusedStory:   React.PropTypes.number.isRequired,
+    stories:        React.PropTypes.array.isRequired,
+    story:          React.PropTypes.object.isRequired,
+    setFocus:       React.PropTypes.func.isRequired
   };
 
   render () {
     return (
-      <div className="tenant-story-popup">
-        <h2>
-          {this.props.story.address}
-        </h2>
+      <div className="story-container">
+        <div id="location-header">
+          {this.renderPreviousButton()}
+          <h2 id="address">
+            {this.props.story.address}
+          </h2>
+          {this.renderNextButton()}
+        </div>
         <h3>
           Owner: {this.props.story.owner}
         </h3>
@@ -27,6 +32,30 @@ class StoryContainer extends React.Component {
         {this.renderVideo()}
       </div>
     );
+  }
+
+  renderPreviousButton () {
+    if ( this.props.focusedStory !== 0 ) {
+      return (
+        <i className="fa fa-chevron-left fa-3x"
+          id="left-nav-button"
+          onClick={this.props.setFocus.bind(this, this.props.focusedStory - 1)} />
+      );
+    } else {
+      return ( <i className="fa fa-chevron-left fa-3x disabled" id="left-nav-button" /> );
+    }
+  }
+
+  renderNextButton () {
+    if ( this.props.focusedStory !== this.props.stories.length - 1) {
+      return (
+        <i className="fa fa-chevron-right fa-3x" 
+          id="right-nav-button"
+          onClick={this.props.setFocus.bind(this, this.props.focusedStory + 1)} />
+      );
+    } else {
+      return ( <i className="fa fa-chevron-right fa-3x disabled" id="right-nav-button" /> );
+    }
   }
 
   renderImages () {
