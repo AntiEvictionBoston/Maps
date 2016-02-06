@@ -1,5 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
+import Icon from 'react-fa';
 
 class StoryContainer extends React.Component {
   constructor (props) {
@@ -15,6 +16,7 @@ class StoryContainer extends React.Component {
   render () {
     return (
       <div className="tenant-story-popup">
+        <Icon name="chevron-left" />
         <h2>
           {this.props.story.address}
         </h2>
