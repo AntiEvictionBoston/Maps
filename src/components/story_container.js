@@ -2,6 +2,16 @@ import React from "react";
 import { render } from "react-dom";
 
 class StoryContainer extends React.Component {
+  constructor (props) {
+    super(props);
+  }
+
+  static propTypes = {
+    focusedStory: React.PropTypes.number.isRequired,
+    stories:      React.PropTypes.array.isRequired,
+    story:        React.PropTypes.object.isRequired
+  };
+
   render () {
     return (
       <div className="tenant-story-popup">

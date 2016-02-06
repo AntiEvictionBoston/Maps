@@ -44,7 +44,10 @@ class StoryMap extends React.Component {
             }} />
         </Map>
         <Sidebar>
-          <StoryContainer story={stories[focusedStory]} />
+          <StoryContainer
+            focusedStory={focusedStory}
+            story={stories[focusedStory]}
+            stories={stories} />
         </Sidebar>
       </div>
     );
