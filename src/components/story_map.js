@@ -34,8 +34,8 @@ class StoryMap extends React.Component {
           <StoryMarkers
             stories={stories}
             map={this.props.map}
-            handleOnClick={story =>
-              dispatch(setFocusedStory(story))} />
+            handleOnClick={index =>
+              dispatch(setFocusedindex(index))} />
         </Map>
         <Sidebar>
           <StoryContainer story={focusedStory} />
