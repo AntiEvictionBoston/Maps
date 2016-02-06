@@ -21,6 +21,7 @@ class StoryMarkers extends React.Component {
           map={this.props.map}
           position={[story.Latitude, story.Longitude]}
           handleOnClick={this.props.handleOnClick}
+          storyId={index}
           key={index}>
         </StoryMarker>
       )));

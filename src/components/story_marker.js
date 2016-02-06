@@ -11,13 +11,13 @@ class StoryMarker extends React.Component {
     map:            React.PropTypes.object.isRequired,
     position:       React.PropTypes.array.isRequired,
     handleOnClick:  React.PropTypes.func.isRequired,
-    story:          React.PropTypes.object.isRequired
+    storyId:        React.PropTypes.number.isRequired
   };
 
   render() {
     return (
       <Marker
-        onClick={this.props.handleOnClick.bind(this, this.props.story)}
+        onClick={this.props.handleOnClick.bind(this, this.props.storyId)}
         map={this.props.map}
         position={this.props.position} />
     );

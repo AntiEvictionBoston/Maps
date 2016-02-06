@@ -22,6 +22,10 @@ class StoryMap extends React.Component {
     eagerLoadImages();
   }
 
+  refreshStoryMap () {
+    this.forceUpdate();
+  }
+
   render() {
     const { dispatch, focusedStory, stories } = this.props;
     return (
@@ -34,8 +38,10 @@ class StoryMap extends React.Component {
           <StoryMarkers
             stories={stories}
             map={this.props.map}
-            handleOnClick={index =>
-              dispatch(setFocusedindex(index))} />
+            handleOnClick={index => {
+              dispatch(setFocusedStory(index));
+              this.refreshStoryMap();
+            }} />
         </Map>
         <Sidebar>
           <StoryContainer story={stories[focusedStory]} />
