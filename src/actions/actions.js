@@ -8,8 +8,8 @@ export const SET_FOCUSED_STORY = 'SET_FOCUSED_STORY';
 export const SET_STORIES = 'SET_STORIES';
 
 // action creators
-export function setFocusedStory (story) {
-  return { type: SET_FOCUSED_STORY, story: story };
+export function setFocusedStory (storyId) {
+  return { type: SET_FOCUSED_STORY, story: storyId };
 }
 
 export function setStories (stories) {

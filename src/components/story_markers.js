@@ -20,7 +20,7 @@ class StoryMarkers extends React.Component {
         <StoryMarker
           map={this.props.map}
           position={[story.Latitude, story.Longitude]}
-          handleOnClick={this.props.handleOnClick}
+          handleOnClick={this.props.handleOnClick.bind(this, index)}
           story={story}
           key={index}>
         </StoryMarker>
