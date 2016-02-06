@@ -1,13 +1,27 @@
-#left-nav-button {
-}
+#location-header {
+  padding-top: 10px;
 
-#right-nav-button {
-}
+  #left-nav-button {
+    float: left;
+  }
 
-#address {
-  text-align: center;
-}
+  #right-nav-button {
+    float: right
+  }
 
-i.disabled {
-  color: #F2F2F2;
+  #address {
+    text-align: center;
+    display: inline-block;
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  i {
+    display: inline-block;
+  }
+
+  i.disabled {
+    color: #F2F2F2;
+  }
 }
