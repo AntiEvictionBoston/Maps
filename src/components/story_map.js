@@ -38,7 +38,7 @@ class StoryMap extends React.Component {
               dispatch(setFocusedindex(index))} />
         </Map>
         <Sidebar>
-          <StoryContainer story={focusedStory} />
+          <StoryContainer story={stories[focusedStory]} />
         </Sidebar>
       </div>
     );
