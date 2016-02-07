@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import RS from "react-sanfona";
+import YouTube from "react-youtube";
 
 class StoryContent extends React.Component {
   constructor (props) {
@@ -14,9 +15,9 @@ class StoryContent extends React.Component {
   render () {
     return (
       <div id="story-content">
-          <h3>
-            Owner: {this.props.story.owner}
-          </h3>
+        <h3>
+          Owner: {this.props.story.owner}
+        </h3>
         <RS.Accordion>
           <RS.AccordionItem title="Images">
             {this.renderImages()}
@@ -44,15 +45,12 @@ class StoryContent extends React.Component {
   renderVideo () {
     if (this.props.story.video) {
       return (
-        <a
-          href={this.props.story.video}
-          target="_blank" >
-          A video about the struggle at this address.
-        </a>
+        <YouTube
+          videoId={this.props.story.video}
+          className="video-container" />
       );
     }
   }
-
 }
 
 export default StoryContent;

@@ -10,7 +10,7 @@ var tenantAssociations = [
     images: [
       photos.maverickStreet173
     ],
-    video: "https://www.youtube.com/watch?v=uinevl-LnTI"
+    video: "uinevl-LnTI"
   },
   {
     address: "142 Gove St.",

@@ -21,7 +21,13 @@
     display: inline-block;
   }
 
-  i.disabled {
+  .disabled {
     color: #F2F2F2;
+  }
+}
+
+#story-content {
+  .video-container {
+    width: 100%;
   }
 }
