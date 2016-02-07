@@ -1,5 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
+import StoryContainerNav from "./story_container_nav";
 
 class StoryContainer extends React.Component {
   constructor (props) {
@@ -16,13 +17,11 @@ class StoryContainer extends React.Component {
   render () {
     return (
       <div className="story-container">
-        <div id="location-header">
-          {this.renderPreviousButton()}
-          <h2 id="address">
-            {this.props.story.address}
-          </h2>
-          {this.renderNextButton()}
-        </div>
+        <StoryContainerNav
+          address={this.props.story.address}
+          focusedStory={this.props.focusedStory}
+          lastStory={this.props.stories.length - 1}
+          setFocus={this.props.setFocus} />
         <h3>
           Owner: {this.props.story.owner}
         </h3>
@@ -32,30 +31,6 @@ class StoryContainer extends React.Component {
         {this.renderVideo()}
       </div>
     );
-  }
-
-  renderPreviousButton () {
-    if ( this.props.focusedStory !== 0 ) {
-      return (
-        <i className="fa fa-chevron-left fa-3x"
-          id="left-nav-button"
-          onClick={this.props.setFocus.bind(this, this.props.focusedStory - 1)} />
-      );
-    } else {
-      return ( <i className="fa fa-chevron-left fa-3x disabled" id="left-nav-button" /> );
-    }
-  }
-
-  renderNextButton () {
-    if ( this.props.focusedStory !== this.props.stories.length - 1) {
-      return (
-        <i className="fa fa-chevron-right fa-3x" 
-          id="right-nav-button"
-          onClick={this.props.setFocus.bind(this, this.props.focusedStory + 1)} />
-      );
-    } else {
-      return ( <i className="fa fa-chevron-right fa-3x disabled" id="right-nav-button" /> );
-    }
   }
 
   renderImages () {
@@ -81,7 +56,6 @@ class StoryContainer extends React.Component {
       );
     }
   }
-
 }
 
 export default StoryContainer;
