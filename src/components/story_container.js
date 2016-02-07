@@ -23,7 +23,7 @@ class StoryContainer extends React.Component {
           focusedStory={this.props.focusedStory}
           lastStory={this.props.stories.length - 1}
           setFocus={this.props.setFocus} />
-        <StoryContent story={this.props.story} />
+        <StoryContent {...this.props} />
       </div>
     );
   }
