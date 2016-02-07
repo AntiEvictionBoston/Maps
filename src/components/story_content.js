@@ -15,10 +15,11 @@ class StoryContent extends React.Component {
   render () {
     return (
       <div id="story-content">
-        <h3>
-          Owner: {this.props.story.owner}
-        </h3>
+
         <RS.Accordion>
+          <RS.AccordionItem title="Building Info">
+            Owner: {this.props.story.owner}
+          </RS.AccordionItem>
           <RS.AccordionItem title="Images">
             {this.renderImages()}
           </RS.AccordionItem>
