@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import StoryContainerNav from "./story_container_nav";
+import StoryContent from "./story_content";
 
 class StoryContainer extends React.Component {
   constructor (props) {
