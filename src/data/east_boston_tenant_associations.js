@@ -3,6 +3,7 @@ import { photos } from "../images/images";
 var tenantAssociations = [
   {
     address: "173-177 Maverick St.",
+    title: "173-177 Maverick St.",
     owner: "Maverick Street Realty",
     units: 7,
     Latitude: 42.369521,
@@ -14,6 +15,7 @@ var tenantAssociations = [
   },
   {
     address: "142 Gove St.",
+    title: "142 Gove St.",
     owner: "RJ Leyden LLC",
     units: 5,
     Latitude: 42.370093,
@@ -51,6 +53,7 @@ cc’d: Sheila A. Dillon, Chief and Director Department of Neighborhood Developm
   },
   {
     address: "64 Lubec St.",
+    title: "64 Lubec St.",
     owner: "Hodara",
     units: 4,
     Latitude: 42.370724,
@@ -61,6 +64,7 @@ cc’d: Sheila A. Dillon, Chief and Director Department of Neighborhood Developm
   },
   {
     address: "219 Maverick St.",
+    title: "219 Maverick St.",
     owner: "Hodara",
     units: 2,
     Latitude: 42.368669,
@@ -71,6 +75,7 @@ cc’d: Sheila A. Dillon, Chief and Director Department of Neighborhood Developm
   },
   {
     address: "220 Saratoga St.",
+    title: "220 Saratoga St.",
     owner: "Hodara",
     units: 1,
     Latitude: 42.378119,
@@ -82,6 +87,7 @@ cc’d: Sheila A. Dillon, Chief and Director Department of Neighborhood Developm
   },
   {
     address: "25 Chelsea St.",
+    title: "25 Chelsea St.",
     owner: "Newman",
     units: 3,
     Latitude: 42.370697,
@@ -92,6 +98,7 @@ cc’d: Sheila A. Dillon, Chief and Director Department of Neighborhood Developm
   },
   {
     address: "1022 Bennington St.",
+    title: "1022 Bennington St.",
     owner: "EB Ventures",
     units: 4,
     Latitude: 42.387102,
@@ -100,7 +107,9 @@ cc’d: Sheila A. Dillon, Chief and Director Department of Neighborhood Developm
       photos.benningtonSt
     ]
   },
-  { address: "354 Chelsea St.",
+  {
+    address: "354 Chelsea St.",
+    title: "354 Chelsea St.",
     owner: "Concepcion Perez",
     units: 2,
     Latitude: 42.378097,
@@ -111,6 +120,7 @@ cc’d: Sheila A. Dillon, Chief and Director Department of Neighborhood Developm
   },
   {
     address: "107-11 Brooks St.",
+    title: "107-11 Brooks St.",
     owner: "David Gradus",
     units: 1,
     Latitude: 42.377834,
