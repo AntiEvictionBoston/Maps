@@ -1,7 +1,10 @@
 import React from "react";
 import { render } from "react-dom";
-import { createStore } from "redux";
+import { createStore, combineReducers } from "redux";
 import { Provider } from "react-redux";
+import { Router, Route, browserHistory } from "react-router";
+import { syncHistoryWithStore, routerReducer } from "react-router-redux";
+
 import EvictionMap from "components/eviction_map";
 import StoryMap from "components/story_map";
 import eastBostonEvictions from "data/east_boston_evictions";
@@ -14,7 +17,13 @@ require("./stylesheets/main.scss");
 // check for different divs, render the appropriate map
 if (document.getElementById('east_boston_tenant_association_map')) {
   let domElement = document.getElementById('east_boston_tenant_association_map');
-  let store = createStore(updateMapState);
+  // let store = createStore(updateMapState);
+  let store = createStore(
+    combineReducers({
+      updateMapState: updateMapState,
+      routing: routerReducer
+    })
+  );
 
   store.dispatch(setStories(eastBostonStories));
   store.dispatch(setFocusedStory(0));

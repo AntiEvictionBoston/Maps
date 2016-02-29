@@ -27,6 +27,7 @@
     "react-images": "^0.3.2",
     "react-leaflet": "^0.10.1",
     "react-redux": "^4.4.0",
+    "react-router": "^2.0.0",
     "react-router-redux": "^4.0.0",
     "react-youtube": "^5.1.0",
     "redux": "^3.3.1"
