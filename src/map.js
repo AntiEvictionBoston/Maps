@@ -18,12 +18,12 @@ require("./stylesheets/main.scss");
 if (document.getElementById('east_boston_tenant_association_map')) {
   let domElement = document.getElementById('east_boston_tenant_association_map');
   // let store = createStore(updateMapState);
-  let store = createStore(
-    combineReducers({
-      updateMapState: updateMapState,
-      routing: routerReducer
-    })
-  );
+  const mapApp = combineReducers({
+    ...updateMapState,
+    router: routerReducer
+  });
+
+  let store = createStore(mapApp);
 
   store.dispatch(setStories(eastBostonStories));
   store.dispatch(setFocusedStory(0));

@@ -1,6 +1,6 @@
 {
   "presets": ["es2015","react", "stage-0"],
-  "plugins": ["transform-react-jsx", "transform-object-assign"],
+  "plugins": ["transform-react-jsx", "transform-object-assign", "transform-object-rest-spread"],
   "ignore": [
     "foo.js",
     "bar/**/*.js"
