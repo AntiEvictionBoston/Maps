@@ -8,8 +8,6 @@ import { Router, Route, browserHistory } from "react-router";
 import EvictionMap from "components/eviction_map";
 import Sidebar from "components/sidebar";
 import StoryMap from "components/story_map";
-import eastBostonEvictions from "data/east_boston_evictions";
-import exampleEvictionContent from "./data/example_eviction_content";
 import eastBostonStories from "./data/east_boston_stories";
 import updateMapState from "./reducers/reducers";
 import { setStories, setFocusedStory } from "./actions/actions";
@@ -60,14 +58,4 @@ if (document.getElementById('east_boston_tenant_association_map')) {
     </Provider>,
     domElement
   );
-}
-else if (document.getElementById('fake_data_map')) {
-  for (var eviction of eastBostonEvictions) {
-    eviction.content = exampleEvictionContent;
-  }
-  let basicFakeDataMap =
-    <EvictionMap
-      position={[42.37, -71.03]}
-      zoom={14}
-      evictions={eastBostonEvictions} />
 }
