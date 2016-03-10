@@ -15,6 +15,14 @@ function updateMapState (state = initialState, action) {
       return Object.assign({}, state, {
         stories: action.stories
       });
+    case actions.SET_ZOOM_LEVEL:
+      return Object.assign({}, state, {
+        zoomLevel: action.zoomLevel
+      });
+    case actions.SET_CENTER:
+      return Object.assign({}, state, {
+        center: action.coordinates
+      });
     default:
       return state;
   }
