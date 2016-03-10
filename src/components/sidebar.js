@@ -6,10 +6,19 @@ class Sidebar extends React.Component {
     super(props);
   }
 
+  componentDidMount () {
+    console.log(this.props.params);
+  }
+
   render () {
     return (
       <div id="map-sidebar">
-        {this.props.children}
+        <StoryContainer
+          focusedStory={focusedStory}
+          story={this.props.story}
+          stories={stories}
+          setFocus={index => dispatch(setFocusedStory(index))} />
+
       </div>
     );
   }

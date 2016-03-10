@@ -6,6 +6,7 @@ import { Router, Route, browserHistory } from "react-router";
 // import { syncHistoryWithStore, routerReducer } from "react-router-redux";
 
 import EvictionMap from "components/eviction_map";
+import Sidebar from "components/sidebar";
 import StoryMap from "components/story_map";
 import eastBostonEvictions from "data/east_boston_evictions";
 import exampleEvictionContent from "./data/example_eviction_content";
@@ -32,21 +33,20 @@ if (document.getElementById('east_boston_tenant_association_map')) {
   const StoryMapWrapper = () => (
     <StoryMap
       position={[42.37, -71.03]}
-      zoom={14} 
+      zoom={14}
     />
   );
 
-  const createStoryRoutes = () => {
+  // generate the routes for stories
+  const SidebarWrapper = (story) => (
+    <Sidebar story={story} />
+  )
+  const storyRoute = (story, index) => (
+    <Route path={story.url} key={index} component={SidebarWrapper.bind(story)} />
+  );
+  const createStoryRoutes = (stories) => {
     let storyRoutes = [];
-    store.getState().stories.forEach( (story, index) => {
-      console.log(story);
-      console.log(index);
-      storyRoutes.push (
-        <Route path={story.url}
-          key={index}
-          onEnter={() => store.dispatch(setFocusedStory(index))} />
-      );
-    });
+    stories.forEach((story, index) => storyRoutes.push(storyRoute(story, index)));
     return storyRoutes;
   };
 
@@ -54,7 +54,7 @@ if (document.getElementById('east_boston_tenant_association_map')) {
     <Provider store={store}>
       <Router history={browserHistory}>
         <Route path="/" component={StoryMapWrapper}>
-          {createStoryRoutes()}
+          <Route path="/:address" component={Sidebar} />
         </Route>
       </Router>
     </Provider>,

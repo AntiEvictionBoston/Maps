@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import StoryMarker from "./story_marker";
+import { Link } from "react-router";
 
 class StoryMarkers extends React.Component {
   constructor (props) {

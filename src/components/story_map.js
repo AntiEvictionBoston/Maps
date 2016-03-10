@@ -43,13 +43,7 @@ class StoryMap extends React.Component {
               this.refreshStoryMap();
             }} />
         </Map>
-        <Sidebar>
-          <StoryContainer
-            focusedStory={focusedStory}
-            story={stories[focusedStory]}
-            stories={stories}
-            setFocus={index => dispatch(setFocusedStory(index))} />
-        </Sidebar>
+        {this.props.children}
       </div>
     );
   }

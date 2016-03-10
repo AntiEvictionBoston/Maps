@@ -2,8 +2,7 @@ import Images from "../images/images";
 
 var eastBostonStories = [
   {
-    address: "Maverick St.",
-    title: "Maverick St.",
+    url: "maverick_st",
     owner: "Maverick Street Realty",
     units: 7,
     Latitude: 42.369521,
@@ -14,8 +13,7 @@ var eastBostonStories = [
     video: "uinevl-LnTI"
   },
   {
-    address: "Gove St.",
-    title: "Gove St.",
+    url: "gove_st",
     owner: "RJ Leyden LLC",
     units: 5,
     Latitude: 42.370093,
@@ -27,8 +25,7 @@ var eastBostonStories = [
     tenantAssociationLetter: ``
   },
   {
-    address: "Lubec St.",
-    title: "Lubec St.",
+    url: "lubec_st",
     owner: "Hodara",
     units: 4,
     Latitude: 42.370724,
@@ -38,8 +35,7 @@ var eastBostonStories = [
     ]
   },
   {
-    address: "Maverick St.",
-    title: "Maverick St.",
+    url: "maverick_st",
     owner: "Hodara",
     units: 2,
     Latitude: 42.368669,
@@ -49,8 +45,7 @@ var eastBostonStories = [
     ]
   },
   {
-    address: "Saratoga St.",
-    title: "Saratoga St.",
+    url: "saratoga_st",
     owner: "Hodara",
     units: 1,
     Latitude: 42.378119,
@@ -61,8 +56,7 @@ var eastBostonStories = [
     ]
   },
   {
-    address: "Chelsea St.",
-    title: "Chelsea St.",
+    url: "chelsea_st",
     owner: "Newman",
     units: 3,
     Latitude: 42.370697,
@@ -72,8 +66,7 @@ var eastBostonStories = [
     ]
   },
   {
-    address: "Bennington St.",
-    title: "Bennington St.",
+    url: "bennington_st",
     owner: "EB Ventures",
     units: 4,
     Latitude: 42.387102,
@@ -83,8 +76,7 @@ var eastBostonStories = [
     ]
   },
   {
-    address: "Chelsea St.",
-    title: "Chelsea St.",
+    url: "chelsea_st",
     owner: "Concepcion Perez",
     units: 2,
     Latitude: 42.378097,
@@ -94,8 +86,7 @@ var eastBostonStories = [
     ]
   },
   {
-    address: "Brooks St.",
-    title: "Brooks St.",
+    url: "brooks_st",
     owner: "David Gradus",
     units: 1,
     Latitude: 42.377834,
