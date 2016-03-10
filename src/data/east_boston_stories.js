@@ -1,8 +1,7 @@
 import Images from "../images/images";
 
-var eastBostonStories = [
-  {
-    url: "maverick_st",
+let eastBostonStories = {
+  "maverick_st": {
     owner: "Maverick Street Realty",
     units: 7,
     Latitude: 42.369521,
@@ -12,8 +11,7 @@ var eastBostonStories = [
     ],
     video: "uinevl-LnTI"
   },
-  {
-    url: "gove_st",
+  "gove_st": {
     owner: "RJ Leyden LLC",
     units: 5,
     Latitude: 42.370093,
@@ -24,8 +22,7 @@ var eastBostonStories = [
     ],
     tenantAssociationLetter: ``
   },
-  {
-    url: "lubec_st",
+  "lubec_st": {
     owner: "Hodara",
     units: 4,
     Latitude: 42.370724,
@@ -34,8 +31,7 @@ var eastBostonStories = [
       Images.images.lubecStreet
     ]
   },
-  {
-    url: "maverick_st",
+  "maverick_st": {
     owner: "Hodara",
     units: 2,
     Latitude: 42.368669,
@@ -44,8 +40,7 @@ var eastBostonStories = [
       Images.images.maverickStreet21
     ]
   },
-  {
-    url: "saratoga_st",
+  "saratoga_st": {
     owner: "Hodara",
     units: 1,
     Latitude: 42.378119,
@@ -55,8 +50,7 @@ var eastBostonStories = [
       Images.images.saratogaStreet
     ]
   },
-  {
-    url: "chelsea_st",
+  "chelsea_st": {
     owner: "Newman",
     units: 3,
     Latitude: 42.370697,
@@ -65,8 +59,7 @@ var eastBostonStories = [
       Images.images.chelseaStreet25
     ]
   },
-  {
-    url: "bennington_st",
+  "bennington_st": {
     owner: "EB Ventures",
     units: 4,
     Latitude: 42.387102,
@@ -75,8 +68,7 @@ var eastBostonStories = [
       Images.images.benningtonSt
     ]
   },
-  {
-    url: "chelsea_st",
+  "chelsea_st": {
     owner: "Concepcion Perez",
     units: 2,
     Latitude: 42.378097,
@@ -85,8 +77,7 @@ var eastBostonStories = [
       Images.images.chelseaStreet35
     ]
   },
-  {
-    url: "brooks_st",
+  "brooks_st": {
     owner: "David Gradus",
     units: 1,
     Latitude: 42.377834,
@@ -95,6 +86,6 @@ var eastBostonStories = [
       Images.images.brooksSt
     ]
   }
-]
+}
 
 export default eastBostonStories;
