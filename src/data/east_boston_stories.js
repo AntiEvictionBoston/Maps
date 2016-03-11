@@ -1,7 +1,7 @@
 import Images from "../images/images";
 
 let eastBostonStories = {
-  "maverick_st": {
+  "maverick_st_1": {
     owner: "Maverick Street Realty",
     units: 7,
     Latitude: 42.369521,
@@ -31,7 +31,7 @@ let eastBostonStories = {
       Images.images.lubecStreet
     ]
   },
-  "maverick_st": {
+  "maverick_st_2": {
     owner: "Hodara",
     units: 2,
     Latitude: 42.368669,
@@ -50,7 +50,7 @@ let eastBostonStories = {
       Images.images.saratogaStreet
     ]
   },
-  "chelsea_st": {
+  "chelsea_st_1": {
     owner: "Newman",
     units: 3,
     Latitude: 42.370697,
@@ -68,7 +68,7 @@ let eastBostonStories = {
       Images.images.benningtonSt
     ]
   },
-  "chelsea_st": {
+  "chelsea_st_2": {
     owner: "Concepcion Perez",
     units: 2,
     Latitude: 42.378097,

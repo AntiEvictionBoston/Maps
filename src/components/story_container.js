@@ -9,20 +9,15 @@ class StoryContainer extends React.Component {
   }
 
   static propTypes = {
-    focusedStory:   React.PropTypes.number.isRequired,
-    stories:        React.PropTypes.array.isRequired,
-    story:          React.PropTypes.object.isRequired,
-    setFocus:       React.PropTypes.func.isRequired
+    story:      React.PropTypes.object.isRequired,
+    next:       React.PropTypes.string,
+    prev:       React.PropTypes.string
   };
 
   render () {
     return (
       <div className="story-container">
-        <StoryContainerNav
-          title={this.props.story.title}
-          focusedStory={this.props.focusedStory}
-          lastStory={this.props.stories.length - 1}
-          setFocus={this.props.setFocus} />
+        <StoryContainerNav {...this.props} />
         <div className="story-content-wrapper">
           <StoryContent {...this.props} />
         </div>

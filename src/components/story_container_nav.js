@@ -1,17 +1,11 @@
 import React from "react";
 import { render } from "react-dom";
+import { Link } from "react-router";
 
 class StoryContainerNav extends React.Component {
   constructor (props) {
     super(props);
   }
-
-  static propTypes = {
-    title:          React.PropTypes.string.isRequired,
-    focusedStory:   React.PropTypes.number.isRequired,
-    lastStory:      React.PropTypes.number.isRequired,
-    setFocus:       React.PropTypes.func.isRequired
-  };
 
   render () {
     return (
@@ -25,29 +19,29 @@ class StoryContainerNav extends React.Component {
     );
   }
 
-  renderPreviousButton () {
-    if ( this.props.focusedStory !== 0 ) {
-      return (
-        <i className="fa fa-angle-left fa-3x"
-          id="left-nav-button"
-          onClick={this.props.setFocus.bind(this, this.props.focusedStory - 1)} />
-      );
-    } else {
-      return ( <i className="fa fa-angle-left fa-3x disabled" id="left-nav-button" /> );
-    }
-  }
+  renderPreviousButton = () => (
+    this.props.prev ? this.activePreviousButton() : this.inactivePreviousButton()
+  );
+  activePreviousButton = () => (
+    <Link to={this.props.prev}>
+      <i className="fa fa-angle-left fa-3x" id="left-nav-button" />
+    </Link>
+  );
+  inactivePreviousButton = () => (
+    <i className="fa fa-angle-left fa-3x disabled" id="left-nav-button" />
+  );
 
-  renderNextButton () {
-    if ( this.props.focusedStory !== this.props.lastStory ) {
-      return (
-        <i className="fa fa-angle-right fa-3x" 
-          id="right-nav-button"
-          onClick={this.props.setFocus.bind(this, this.props.focusedStory + 1)} />
-      );
-    } else {
-      return ( <i className="fa fa-angle-right fa-3x disabled" id="right-nav-button" /> );
-    }
-  }
+  renderNextButton = () => (
+    this.props.next ? this.activeNextButton() : this.inactiveNextButton()
+  );
+  activeNextButton = () => (
+    <Link to={this.props.next}>
+      <i className="fa fa-angle-right fa-3x" id="right-nav-button" />
+    </Link>
+  );
+  inactiveNextButton = () => (
+    <i className="fa fa-angle-right fa-3x disabled" id="right-nav-button" />
+  );
 }
 
 export default StoryContainerNav;

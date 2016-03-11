@@ -4,7 +4,6 @@ import { Map, Popup, TileLayer } from 'react-leaflet';
 import Sidebar from "./sidebar";
 import { setFocusedStory } from "../actions/actions";
 import StoryMarkers from "../components/story_markers";
-import StoryContainer from "../components/story_container";
 import Images from "../images/images";
 
 class StoryMap extends React.Component {
@@ -13,8 +12,6 @@ class StoryMap extends React.Component {
   }
 
   static propTypes = {
-    position:       React.PropTypes.array.isRequired,
-    zoom:           React.PropTypes.number.isRequired,
     dispatch:       React.PropTypes.func.isRequired
   };
 
@@ -27,10 +24,10 @@ class StoryMap extends React.Component {
   }
 
   render() {
-    const { dispatch, focusedStory, stories } = this.props;
+    const { dispatch, focusedStory, stories, zoomLevel, center  } = this.props;
     return (
       <div id="map-container">
-        <Map center={this.props.position} zoom={this.props.zoom}>
+        <Map center={center} zoom={zoomLevel}>
           <TileLayer
             url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
             attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
@@ -43,7 +40,9 @@ class StoryMap extends React.Component {
               this.refreshStoryMap();
             }} />
         </Map>
-        {this.props.children}
+        <Sidebar
+          stories={stories}
+          address={this.props.params.address} />
       </div>
     );
   }
@@ -52,7 +51,9 @@ class StoryMap extends React.Component {
 function mapState (state) {
   return {
     stories:      state.stories,
-    focusedStory:  state.focusedStory
+    focusedStory: state.focusedStory,
+    zoomLevel:    state.zoomLevel,
+    center:       state.center
   }
 }
 
