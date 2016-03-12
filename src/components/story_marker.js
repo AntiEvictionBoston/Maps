@@ -1,4 +1,5 @@
 import React from "react";
+import { hashHistory } from "react-router";
 import { Marker } from "react-leaflet";
 import * as actions from "../actions/actions";
 
@@ -8,19 +9,25 @@ class StoryMarker extends React.Component {
   }
 
   static propTypes = {
-    map:            React.PropTypes.object.isRequired,
-    position:       React.PropTypes.array.isRequired,
-    handleOnClick:  React.PropTypes.func.isRequired,
-    storyId:        React.PropTypes.number.isRequired
+    map:      React.PropTypes.object.isRequired,
+    story:    React.PropTypes.object.isRequired,
+    url:      React.PropTypes.string.isRequired
   };
 
   render() {
     return (
       <Marker
-        onClick={this.props.handleOnClick.bind(this, this.props.storyId)}
+        onClick={this.handleClick}
         map={this.props.map}
-        position={this.props.position} />
+        position={this.storyLocation()} />
     );
+  }
+
+  handleClick = () => hashHistory.push(this.props.url);
+
+  storyLocation () {
+    let {Latitude, Longitude} = this.props.story;
+    return [Latitude, Longitude];
   }
 }
 
