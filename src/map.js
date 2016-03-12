@@ -11,8 +11,8 @@ import * as actions from "./actions/actions";
 require("./stylesheets/main.scss");
 
 // check for different divs, render the appropriate map
-if (document.getElementById('east_boston_tenant_association_map')) {
-  let domElement = document.getElementById('east_boston_tenant_association_map');
+let domElement = document.getElementById('east_boston_tenant_association_map');
+if (domElement) {
   let store = createStore(updateMapState);
 
   store.dispatch(actions.setStories(eastBostonStories));

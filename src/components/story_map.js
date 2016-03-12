@@ -2,7 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 import { Map, Popup, TileLayer } from 'react-leaflet';
 import Sidebar from "./sidebar";
-import { setFocusedStory } from "../actions/actions";
 import StoryMarkers from "../components/story_markers";
 import Images from "../images/images";
 
@@ -19,10 +18,6 @@ class StoryMap extends React.Component {
     Images.eagerLoad();
   }
 
-  refreshStoryMap () {
-    this.forceUpdate();
-  }
-
   render() {
     const { dispatch, focusedStory, stories, zoomLevel, center  } = this.props;
     return (
@@ -34,11 +29,7 @@ class StoryMap extends React.Component {
           />
           <StoryMarkers
             stories={stories}
-            map={this.props.map}
-            handleOnClick={index => {
-              dispatch(setFocusedStory(index));
-              this.refreshStoryMap();
-            }} />
+            map={this.props.map} />
         </Map>
         <Sidebar
           stories={stories}

@@ -1,7 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
 import StoryMarker from "./story_marker";
-import { Link } from "react-router";
 
 class StoryMarkers extends React.Component {
   constructor (props) {
@@ -10,8 +9,7 @@ class StoryMarkers extends React.Component {
 
   static propTypes = {
     stories:          React.PropTypes.object,
-    map:              React.PropTypes.object,
-    handleOnClick:    React.PropTypes.func
+    map:              React.PropTypes.object
   };
 
   render () {
