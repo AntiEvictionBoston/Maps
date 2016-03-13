@@ -33,6 +33,7 @@ class StoryMap extends React.Component {
             map={this.props.map} />
         </Map>
         <Sidebar
+          currentCenter={center}
           stories={stories}
           address={this.props.params.address} />
       </div>
