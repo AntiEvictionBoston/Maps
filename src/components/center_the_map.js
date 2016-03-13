@@ -1,20 +1,27 @@
 import React from "react";
 import { render } from "react";
+import { setCenter } from "../actions/actions";
 
 class CenterTheMap extends React.Component {
   static propTypes = {
     url:            React.PropTypes.string,
     currentCenter:  React.PropTypes.array,
+    currentZoom:    React.PropTypes.number,
     stories:        React.PropTypes.object,
     map:            React.PropTypes.object,
-    setCenter:      React.PropTypes.func
+    dispatch:       React.PropTypes.func
   }
 
-  componentWillReceiveProps () {
+  componentWillMount = () => this.recenterMap();
+  componentWillReceiveProps = () => this.recenterMap();
+
+  recenterMap () {
     if ( ! this.centerMatches() ) {
       let { Latitude, Longitude } = this.focusedStory();
-      this.props.map.setView([Latitude, Longitude]);
-      this.props.setCenter([Latitude, Longitude]);
+      this.props.map.panTo(
+        [Latitude, Longitude],
+        { animate: true }
+      );
     }
   }
 

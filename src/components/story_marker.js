@@ -13,7 +13,7 @@ class StoryMarker extends React.Component {
   static propTypes = {
     map:          React.PropTypes.object.isRequired,
     story:        React.PropTypes.object.isRequired,
-    currentUrl:   React.PropTypes.string.isRequired,
+    currentUrl:   React.PropTypes.string,
     urlForStory:  React.PropTypes.string.isRequired
   };
 

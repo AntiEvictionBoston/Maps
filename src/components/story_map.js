@@ -4,7 +4,6 @@ import { Map, Popup, TileLayer } from 'react-leaflet';
 import Sidebar from "./sidebar";
 import StoryMarkers from "../components/story_markers";
 import Images from "../images/images";
-import { setCenter } from "../actions/actions";
 import CenterTheMap from "./center_the_map";
 
 class StoryMap extends React.Component {
@@ -36,11 +35,10 @@ class StoryMap extends React.Component {
           <CenterTheMap
             url={this.props.params.address}
             currentCenter={center}
+            currentZoom={zoomLevel}
             stories={stories}
             map={this.props.map}
-            setCenter={(coords) => {
-                dispatch(setCenter(coords));
-            }} />
+            dispatch={dispatch} />
         </Map>
         <Sidebar
           stories={stories}
