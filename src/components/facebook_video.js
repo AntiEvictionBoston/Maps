@@ -12,7 +12,7 @@ class FacebookVideo extends React.Component {
         class="fb-video"
         data-href={this.props.videoUrl}
         data-allowfullscreen="true"
-        data-width="500">
+        data-width="auto">
       </div>
     );
   }
