@@ -9,9 +9,10 @@ class StoryMarker extends React.Component {
   }
 
   static propTypes = {
-    map:      React.PropTypes.object.isRequired,
-    story:    React.PropTypes.object.isRequired,
-    url:      React.PropTypes.string.isRequired
+    map:          React.PropTypes.object.isRequired,
+    story:        React.PropTypes.object.isRequired,
+    currentUrl:   React.PropTypes.string.isRequired,
+    urlForStory:  React.PropTypes.string.isRequired
   };
 
   render() {
@@ -22,6 +23,14 @@ class StoryMarker extends React.Component {
         position={this.storyLocation()} />
     );
   }
+
+  pickIcon = () => (
+    this.isActive() ? this.activeIcon() : this.inactiveIcon()
+  );
+
+  isActive = () => (
+    this.props.currentUrl === this.props.urlForStory
+  );
 
   handleClick = () => hashHistory.push(this.props.url);
 
