@@ -29,6 +29,7 @@ class StoryMap extends React.Component {
           />
           <StoryMarkers
             stories={stories}
+            url={this.props.params.address}
             map={this.props.map} />
         </Map>
         <Sidebar

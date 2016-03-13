@@ -8,8 +8,9 @@ class StoryMarkers extends React.Component {
   }
 
   static propTypes = {
-    stories:          React.PropTypes.object,
-    map:              React.PropTypes.object
+    url:      React.PropTypes.string,
+    stories:  React.PropTypes.object,
+    map:      React.PropTypes.object
   };
 
   render () {
@@ -19,8 +20,9 @@ class StoryMarkers extends React.Component {
       markers.push(
         <StoryMarker
           map={this.props.map}
+          currentUrl={this.props.url}
           story={story}
-          url={k}
+          urlForStory={k}
           key={i}>
         </StoryMarker>
       );
