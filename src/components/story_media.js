@@ -17,7 +17,6 @@ class StoryMedia extends React.Component {
     this.props.story.images.forEach((image, index) => (
       images.push (
         <img
-          width="300px"
           src={image}
           key={index} />
       )));

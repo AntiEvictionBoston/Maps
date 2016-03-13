@@ -1,6 +1,16 @@
+// Variables
+$font__family: "Lato", "Helvetica", "Arial", sans-serif;
+$font__weight-regular: 400;
+$font__weight-light: 300;
+$font__weight-bold: 900; 
+
+$spacing-unit: 24px;
+
+// Import components
 @import "leaflet/leaflet";
 @import "sidebar";
 
+// Basic styles
 html, body {
   height: 100%;
   width: 100%;
