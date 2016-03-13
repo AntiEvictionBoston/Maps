@@ -5,6 +5,7 @@ import Sidebar from "./sidebar";
 import StoryMarkers from "../components/story_markers";
 import Images from "../images/images";
 import { setCenter } from "../actions/actions";
+import CenterTheMap from "./center_the_map";
 
 class StoryMap extends React.Component {
   constructor(props) {
@@ -29,14 +30,17 @@ class StoryMap extends React.Component {
             attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
           />
           <StoryMarkers
-            stories={stories}
-            setCenter={(coords) => {
-              dispatch(setCenter(coords));
-            }}
-            currentCenter={center}
             url={this.props.params.address}
-            animate={true}
+            stories={stories}
             map={this.props.map} />
+          <CenterTheMap
+            url={this.props.params.address}
+            currentCenter={center}
+            stories={stories}
+            map={this.props.map}
+            setCenter={(coords) => {
+                dispatch(setCenter(coords));
+            }} />
         </Map>
         <Sidebar
           stories={stories}
