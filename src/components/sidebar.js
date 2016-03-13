@@ -8,9 +8,8 @@ class Sidebar extends React.Component {
   }
 
   static propTypes = {
-    currentCenter:  React.PropTypes.array,
-    address:        React.PropTypes.string,
-    stories:        React.PropTypes.object
+    address:    React.PropTypes.string,
+    stories:    React.PropTypes.object
   };
 
   addressIndex = () => (
