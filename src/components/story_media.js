@@ -16,19 +16,25 @@ class StoryMedia extends React.Component {
     var images = [];
     this.props.story.images.forEach((image, index) => (
       images.push (
-        <img
-          src={image}
-          key={index} />
+        <div
+          className={"row media-row" + this.toggleMediaHiding(index)}
+          key={index}>
+          <img src={image} />
+        </div>
       )));
     return images;
   }
 
+  toggleMediaHiding = (index) => index === 0 ? "" : "hidden";
+
   renderVideo () {
     if (this.props.story.video) {
       return (
-        <YouTube
-          videoId={this.props.story.video}
-          className="video-container" />
+        <div className="row media-row">
+          <YouTube
+            videoId={this.props.story.video}
+            className="video-container" />
+        </div>
       );
     }
   }
