@@ -36,6 +36,7 @@
 
 #map-sidebar {
   position: relative;
+  font-family: $font__family;
 }
 
 .story-content-wrapper {
@@ -50,14 +51,20 @@
 #story-content {
   margin: 0;
   padding: 0;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: $spacing-unit;
+  padding-right: $spacing-unit;
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
 
   $table-border-style: 1px solid $background-grey;
 
   table#story-basic-info {
     width: 100%;
     border-collapse: collapse;
+    margin-bottom: $spacing-unit;
 
     tr {
       border-top: $table-border-style;
@@ -65,13 +72,30 @@
 
       td {
         border-right: $table-border-style;
+        padding: $spacing-unit/2;
       }
-      td:last-child {border-right: none; }
+      
+      td:first-child {
+        text-align: right;
+        width: 25%;
+      }
+      
+      td:last-child {
+        border-right: none; 
+      }
     }
-    tr:first-child { border-top: none; }
-    tr:last-child { border-bottom: none; }
-    #rent-row {
+    
+    tr:first-child { 
+      border-top: none;   
+    }
+    
+    tr:last-child { 
+      border-bottom: none; 
+    }
+    
+    #rent-row td:first-child {
       color: $eviction-red;
+      font-weight: $font__weight-bold;  
     }
   }
 }
