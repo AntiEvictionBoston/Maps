@@ -1,8 +1,7 @@
 @import "colorscheme";
 
 #location-header {
-  padding-top: 10px;
-  height: 3.5em;
+  height: $spacing-unit*2;
   background-color: $eviction-red;
 
   #left-nav-button {
@@ -40,7 +39,7 @@
 }
 
 .story-content-wrapper {
-  top: 5em;
+  top: $spacing-unit*2;
   position: absolute;
   right: 0;
   left: 0;
@@ -50,9 +49,7 @@
 
 #story-content {
   margin: 0;
-  padding: 0;
-  padding-left: $spacing-unit;
-  padding-right: $spacing-unit;
+  padding: $spacing-unit;
   
   img {
     width: 100%;
@@ -102,9 +99,7 @@
 
 // mobile specific styling
 @media screen and (max-width: 768px){
-  #story-content {
-    padding-left: 15px;
-  }
+
 }
 
 .video-container {
