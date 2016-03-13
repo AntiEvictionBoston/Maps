@@ -3,6 +3,7 @@ import Images from "../images/images";
 let eastBostonStories = {
   "maverick_st_1": {
     owner: "Maverick Street Realty",
+    type: "story",
     units: 7,
     Latitude: 42.369521,
     Longitude: -71.037244,
@@ -13,6 +14,7 @@ let eastBostonStories = {
   },
   "gove_st": {
     owner: "RJ Leyden LLC",
+    type: "story",
     units: 5,
     Latitude: 42.370093,
     Longitude: -71.033843,
@@ -24,6 +26,7 @@ let eastBostonStories = {
   },
   "lubec_st": {
     owner: "Hodara",
+    type: "story",
     units: 4,
     Latitude: 42.370724,
     Longitude: -71.033808,
@@ -33,6 +36,7 @@ let eastBostonStories = {
   },
   "maverick_st_2": {
     owner: "Hodara",
+    type: "story",
     units: 2,
     Latitude: 42.368669,
     Longitude: -71.035611,
@@ -42,6 +46,7 @@ let eastBostonStories = {
   },
   "saratoga_st": {
     owner: "Hodara",
+    type: "story",
     units: 1,
     Latitude: 42.378119,
     Longitude: -71.033425,
@@ -52,6 +57,7 @@ let eastBostonStories = {
   },
   "chelsea_st_1": {
     owner: "Newman",
+    type: "story",
     units: 3,
     Latitude: 42.370697,
     Longitude: -71.037756,
@@ -61,6 +67,7 @@ let eastBostonStories = {
   },
   "bennington_st": {
     owner: "EB Ventures",
+    type: "story",
     units: 4,
     Latitude: 42.387102,
     Longitude: -71.006143,
@@ -70,6 +77,7 @@ let eastBostonStories = {
   },
   "chelsea_st_2": {
     owner: "Concepcion Perez",
+    type: "story",
     units: 2,
     Latitude: 42.378097,
     Longitude: -71.029607,
@@ -79,6 +87,7 @@ let eastBostonStories = {
   },
   "brooks_st": {
     owner: "David Gradus",
+    type: "story",
     units: 1,
     Latitude: 42.377834,
     Longitude: -71.034292,
