@@ -3,10 +3,18 @@ import { render } from "react-dom";
 
 class FacebookVideo extends React.Component {
   static propTypes = {
-    url:    React.PropTypes.string.isRequired
+    videoUrl:  React.PropTypes.string.isRequired
   };
 
   render () {
+    return (
+      <div
+        class="fb-video"
+        data-href={this.props.videoUrl}
+        data-allowfullscreen="true"
+        data-width="500">
+      </div>
+    );
   }
 }
 
