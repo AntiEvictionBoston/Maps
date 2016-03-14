@@ -49,7 +49,7 @@
 
 #story-content {
   margin: 0;
-  padding: $spacing-unit;
+  padding: $spacing-unit $spacing-unit $spacing-unit*3 $spacing-unit;
   
   img {
     width: 100%;
