@@ -16,10 +16,10 @@ class Images {
     beach61: "https://cdn.rawgit.com/AntiEvictionBoston/utility/7a192a21ba9eca6391e08114eae87a5083dc0061/images/6-beach1.jpeg",
     rugglesstreet9131: "https://cdn.rawgit.com/AntiEvictionBoston/utility/7a192a21ba9eca6391e08114eae87a5083dc0061/images/9-13-ruggles-street1.jpeg",
     maverickst171: "https://cdn.rawgit.com/AntiEvictionBoston/utility/7a192a21ba9eca6391e08114eae87a5083dc0061/images/17-maverick-1.jpeg",
-    rosastreet431: "https://cdn.rawgit.com/AntiEvictionBoston/utility/7a192a21ba9eca6391e08114eae87a5083dc0061/images/43-rosa-street1.jpeg",
+    riverstreet431: "https://cdn.rawgit.com/AntiEvictionBoston/utility/7a192a21ba9eca6391e08114eae87a5083dc0061/images/43-rosa-street1.jpeg",
     tremont611: "https://cdn.rawgit.com/AntiEvictionBoston/utility/7a192a21ba9eca6391e08114eae87a5083dc0061/images/61-tremont1.jpeg",
-    johnny1: "https://cdn.rawgit.com/AntiEvictionBoston/utility/7a192a21ba9eca6391e08114eae87a5083dc0061/images/johnny-1.jpeg",
-    johnny2: "https://cdn.rawgit.com/AntiEvictionBoston/utility/7a192a21ba9eca6391e08114eae87a5083dc0061/images/johnny-2.jpeg",
+    johnny11: "https://cdn.rawgit.com/AntiEvictionBoston/utility/7a192a21ba9eca6391e08114eae87a5083dc0061/images/johnny-1.jpeg",
+    johnny12: "https://cdn.rawgit.com/AntiEvictionBoston/utility/7a192a21ba9eca6391e08114eae87a5083dc0061/images/johnny-2.jpeg",
     rosastreet1: "https://cdn.rawgit.com/AntiEvictionBoston/utility/7a192a21ba9eca6391e08114eae87a5083dc0061/images/rosa-street-1.jpeg",
     rosastreet2: "https://cdn.rawgit.com/AntiEvictionBoston/utility/7a192a21ba9eca6391e08114eae87a5083dc0061/images/rosa-street-2.jpeg"
   }
