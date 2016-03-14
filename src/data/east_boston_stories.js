@@ -11,7 +11,7 @@ let eastBostonStories = {
     Latitude: 42.369521,
     Longitude: -71.037244,
     images: [
-      Images.images.maverickstreet171
+      Images.images.maverickst171
     ],
     video: ""
   },
