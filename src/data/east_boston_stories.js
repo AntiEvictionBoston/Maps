@@ -73,6 +73,55 @@ let eastBostonStories = {
     Longitude: -71.038111,
     images: [],
   },
+  "johnny_ct_1": {
+    title: "Ms. Huang and Ms. Zhong",
+    owner: "N/A",
+    type: "story",
+    center: [42.37, -71.03],
+    rent: "$300",
+    story: `"Ms. Huang and Ms. Zhong live in separate apartments in the same building. Ms. Huang and her husband are on the top floor, and they have 3 young children, including an infant. 
+    Ms. Zhong lives with her husband and two daughters downstairs from Ms. Huang. In 2015, their row-house style building was sold to a new owner for over 1 million dollars. 
+    
+    The landlord raised Ms. Huang's rent in 2015 by $300 a month, and in 2016 is seeking to raise the rent again by another $250. Ms. Huang asked the landlord to lower the rate of rent increases, because her family is now paying more than 50% of their income in rent.
+    
+    Ms. Zhong's rent has risen by several hundred dollars to a total of $2600 per month. Because Ms. Zhong's family can't afford $2600 per month, and they're unable to find an affordable alternative in Chinatown, they're likely to be displaced from Chinatown in the spring of 2016."`,
+    Latitude: 42.347993,
+    Longitude: -71.063258,
+    images: [
+      Images.images.johnny11,
+      Images.images.johnny12,
+    ],
+  },
+  "beach_st_1": {
+    title: "Mr. Wu",
+    owner: "N/A",
+    type: "story",
+    center: [42.37, -71.03],
+    rent: "N/A",
+    story: `Mr. Wu moved to Beach Street in January, 2014. In the spring of the following year, the landlord told Mr. Wu and his roommate to move out. The only reason the landlord stated was that she wants to make repairs to the apartment. Mr. Wu could benefit from a Just Cause Eviction ordinance. `,
+    Latitude: 42.351311,
+    Longitude: -71.059885,
+    images: [
+      Images.images.beach61
+    ],
+  },
+  "tremont_st_1": {
+    title: "Ms. Ye and Family",
+    owner: "Tremont Development LLC 615",
+    type: "story",
+    center: [42.37, -71.03],
+    rent: "N/A",
+    story: `Ms. Ye and her family had to move out of their Shawmut Ave. apartment building when it was sold in 2006. They then moved into an apartment on Tremont Street. In the decade that Ms. Ye's family has lived on Tremont, their rent has risen by over 45%.
+
+    Three other Chinese families lived in the building. In April of 2015, the building was sold for $2.86 million to Tremont Development LLC 615. The principal agent for the LLC is Sean Kennedy who also owns Kennedy Design and Building LLC, which specializes in converting apartments to luxury condos. 
+    
+    As soon as 615 Tremont Street LLC bought the building, they started clearing out the building of the former residents. By the end of summer 2015, Ms. Ye and her family were the only ones left in the building because they have no place to move to. They continue to be the only ones left, and it's uncertain where the family will end up.`,
+    Latitude: 42.342516, 
+    Longitude: -71.074167,
+    images: [
+      Images.images.tremont611
+    ],
+  },
   "ruggles_st_1": {
     title: "Felicha, Purple, and Alzina",
     owner: "Advanced Property Management",
@@ -176,55 +225,6 @@ let eastBostonStories = {
       Images.images.riverstreet431,
     ],
   },
-  "johnny_ct_1": {
-    title: "Ms. Huang and Ms. Zhong",
-    owner: "N/A",
-    type: "story",
-    center: [42.37, -71.03],
-    rent: "$300",
-    story: `"Ms. Huang and Ms. Zhong live in separate apartments in the same building. Ms. Huang and her husband are on the top floor, and they have 3 young children, including an infant. 
-    Ms. Zhong lives with her husband and two daughters downstairs from Ms. Huang. In 2015, their row-house style building was sold to a new owner for over 1 million dollars. 
-    
-    The landlord raised Ms. Huang's rent in 2015 by $300 a month, and in 2016 is seeking to raise the rent again by another $250. Ms. Huang asked the landlord to lower the rate of rent increases, because her family is now paying more than 50% of their income in rent.
-    
-    Ms. Zhong's rent has risen by several hundred dollars to a total of $2600 per month. Because Ms. Zhong's family can't afford $2600 per month, and they're unable to find an affordable alternative in Chinatown, they're likely to be displaced from Chinatown in the spring of 2016."`,
-    Latitude: 42.347993,
-    Longitude: -71.063258,
-    images: [
-      Images.images.johnny11,
-      Images.images.johnny12,
-    ],
-  },
-  "beach_st_1": {
-    title: "Mr. Wu",
-    owner: "N/A",
-    type: "story",
-    center: [42.37, -71.03],
-    rent: "N/A",
-    story: `Mr. Wu moved to Beach Street in January, 2014. In the spring of the following year, the landlord told Mr. Wu and his roommate to move out. The only reason the landlord stated was that she wants to make repairs to the apartment. Mr. Wu could benefit from a Just Cause Eviction ordinance. `,
-    Latitude: 42.351311,
-    Longitude: -71.059885,
-    images: [
-      Images.images.beach61
-    ],
-  },
-  "tremont_st_1": {
-    title: "Ms. Ye and Family",
-    owner: "Tremont Development LLC 615",
-    type: "story",
-    center: [42.37, -71.03],
-    rent: "N/A",
-    story: `Ms. Ye and her family had to move out of their Shawmut Ave. apartment building when it was sold in 2006. They then moved into an apartment on Tremont Street. In the decade that Ms. Ye's family has lived on Tremont, their rent has risen by over 45%.
-
-    Three other Chinese families lived in the building. In April of 2015, the building was sold for $2.86 million to Tremont Development LLC 615. The principal agent for the LLC is Sean Kennedy who also owns Kennedy Design and Building LLC, which specializes in converting apartments to luxury condos. 
-    
-    As soon as 615 Tremont Street LLC bought the building, they started clearing out the building of the former residents. By the end of summer 2015, Ms. Ye and her family were the only ones left in the building because they have no place to move to. They continue to be the only ones left, and it's uncertain where the family will end up.`,
-    Latitude: 42.351311,
-    Longitude: -71.059885,
-    images: [
-      Images.images.beach61
-    ],
-  },
   "harvard_ave_1": {
     title: "Arnie",
     owner: "N/A",
@@ -247,7 +247,7 @@ let eastBostonStories = {
     Latitude: 42.288452, 
     Longitude: -71.073895,
     images: [
-      Images.images.beach61
+      Images.images.oakwood31
     ],
   },
 }

@@ -12,7 +12,7 @@ class StoryContainerNav extends React.Component {
       <div id="location-header">
         {this.renderPreviousButton()}
         <h2 id="title">
-          {this.props.title}
+          {this.props.story.title}
         </h2>
         {this.renderNextButton()}
       </div>
