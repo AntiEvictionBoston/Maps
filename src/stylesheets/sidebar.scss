@@ -100,6 +100,40 @@
     .hidden {
       display: none;
     }
+
+    .button-container {
+      text-align: center;
+    }
+
+    button {
+      margin-top: 10px;
+      background-color: $eviction-red;
+      -webkit-border-top-left-radius:2px;
+      -moz-border-radius-topleft:2px;
+      border-top-left-radius:2px;
+      -webkit-border-top-right-radius:2px;
+      -moz-border-radius-topright:2px;
+      border-top-right-radius:2px;
+      -webkit-border-bottom-right-radius:2px;
+      -moz-border-radius-bottomright:2px;
+      border-bottom-right-radius:2px;
+      -webkit-border-bottom-left-radius:2px;
+      -moz-border-radius-bottomleft:2px;
+      border-bottom-left-radius:2px;
+      text-indent:0;
+      border:1px solid #d02718;
+      display:inline-block;
+      color:#ffffff;
+      font-family:Arial;
+      font-size:13px;
+      font-weight:bold;
+      font-style:normal;
+      height:25px;
+      line-height:20px;
+      width:193px;
+      text-decoration:none;
+      text-align:center;
+    }
   }
 }
 
