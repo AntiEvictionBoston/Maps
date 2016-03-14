@@ -98,7 +98,31 @@
   }
 
   #neighborhood-button {
-
+    margin-top: $spacing-unit;
+    text-align: center;
+    button {
+      border: 0;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      a {
+        display: inline-block;
+        transition: all ease 400ms;
+        background: $eviction-red;
+        font-weight: $font__weight-bold;
+        font-size: 1rem;
+        border: 0;
+        margin: 0;
+        border-radius: $spacing-unit/4;
+        padding: $spacing-unit/2 $spacing-unit;
+        color: $font-white;
+        text-decoration: none;
+        &:hover {
+          background: darken($eviction-red, 8%);
+        }
+      } 
+    }
   }
 
   #story-media {
