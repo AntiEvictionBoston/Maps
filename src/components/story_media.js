@@ -1,7 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
 import YouTube from "react-youtube";
-import FacebookVideo from "./facebook_video";
 
 class StoryMedia extends React.Component {
   render () {
@@ -134,8 +133,8 @@ class StoryMedia extends React.Component {
     if (this.props.story.video) {
       return (
         <div className="row media-row">
-          <FacebookVideo
-            videoUrl={this.props.story.video}
+          <YouTube
+            videoId={this.props.story.video}
             className="video-container" />
         </div>
       );
