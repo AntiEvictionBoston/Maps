@@ -9,7 +9,7 @@ class FacebookVideo extends React.Component {
   render () {
     return (
       <div
-        className="fb-video"
+        class="fb-video"
         data-href={this.props.videoUrl}
         data-allowfullscreen="true"
         data-width="auto">
