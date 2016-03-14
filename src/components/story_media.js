@@ -13,7 +13,7 @@ class StoryMedia extends React.Component {
   }
 
   componentWillMount () {
-    this.setState({ show: false });
+    this.setState({ showAllImages: false });
   }
 
   renderImages () {
@@ -21,23 +21,34 @@ class StoryMedia extends React.Component {
     this.props.story.images.forEach((image, index) => (
       images.push (
         <div
-          className={"row media-row " + this.toggleMediaHiding(index)}
+          className={"row media-row " + this.setHidingState(index)}
           key={index}>
           <img src={image} />
         </div>
-      )));
-      images.splice(1, 0, this.showMoreButton());
+      )
+    ));
+    if ( images.length > 1 ) {
+      images.push(this.showMoreButton(images.length + 1));
+    }
     return images;
   }
 
-  showMoreButton () {
+  showMoreButton (index) {
     return (
-      <button onClick={() => this.setState({show: true})}>Show more!</button>
+      <button key={index} onClick={this.toggleShowState}>{this.showButtonText()}</button>
     );
   }
 
+  toggleShowState = () => this.setState({ showAllImages: !this.state.showAllImages });
+  showButtonText = () => this.state.showAllImages ? "collapse" : "expand";
 
-  toggleMediaHiding = (index) => index === 0 ? "" : "hidden";
+  setHidingState (index) {
+    if ( this.state.showAllImages ) {
+      return "";
+    } else {
+      return index === 0 ? "" : "hidden";
+    }
+  }
 
   renderVideo () {
     if (this.props.story.video) {

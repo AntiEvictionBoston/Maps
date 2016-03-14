@@ -95,6 +95,12 @@
       font-weight: $font__weight-bold;  
     }
   }
+
+  #story-media {
+    .hidden {
+      display: none;
+    }
+  }
 }
 
 // mobile specific styling
