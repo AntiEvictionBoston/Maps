@@ -188,7 +188,7 @@ let eastBostonStories = {
     rent: "N/A",
     video: "PeANdSwTR8k",
     story: `Marvin's family home on Washington Street in the heart of Egleston Square was sold to an investor. Marvin was 18 years old when his family was evicted. Washington Street is being rezoned in a new "master plan" for the area while thousands of newcomers try to move into Boston. Most of Marvin's family has already moved out of the city to Randolph and Braintree. Marvin grew up deeply involved in the Egleston community, especially since his house was right next to the YMCA community center. Marvin says, "The 'master plan' or whatever's going on, it's interesting because I got people in this neighborhood that are gonna be going through what I went through. It starts from a couple people to a whole lot, to a whole community. And that's just not right."`,
-    Latitude: 442.314093,  
+    Latitude: 42.314093,  
     Longitude: -71.099801,
     images: [],
   },
