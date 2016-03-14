@@ -46,10 +46,10 @@ class StoryMedia extends React.Component {
 
   showMoreImagesButton (index) {
     return (
-      <div className="button-container">
-        <button key={index} onClick={this.toggleShowImages} className="expand-images-button">
+      <div className="showhide-container">
+        <span key={index} onClick={this.toggleShowImages} className="expand-images-button">
           {this.showButtonText()}
-        </button>
+        </span>
       </div>
     );
   }
@@ -57,16 +57,14 @@ class StoryMedia extends React.Component {
   showButtonText () {
     if ( this.state.showAllImages ){
       return (
-        <div>
-          <i className="fa fa-arrow-up"></i>
-          {" collapse"}
+        <div className="showhide-control">
+          {"Show fewer images..."}
         </div>
       );
     } else {
       return (
-        <div>
-          <i className="fa fa-arrow-down"></i>
-          {" expand"}
+        <div className="showhide-control">
+          {"Show more images..."}
        </div>
       );
     }
@@ -99,10 +97,10 @@ class StoryMedia extends React.Component {
 
   showStoryButton (index) {
     return (
-      <div className="button-container">
-        <button key={index} onClick={this.toggleShowStory} className="expand-story-button">
+      <div className="showhide-container">
+        <span key={index} onClick={this.toggleShowStory} className="expand-story-button">
           {this.showStoryText()}
-        </button>
+        </span>
       </div>
     );
   }
@@ -110,17 +108,15 @@ class StoryMedia extends React.Component {
   showStoryText () {
     if ( this.state.showAllStory ) {
       return (
-        <div>
-          <i className="fa fa-arrow-up"></i>
-          {" collapse"}
-        </div>
+        <span className="showhide-control">
+          {"Show less text..."}
+        </span>
       );
     } else {
       return (
-        <div>
-          <i className="fa fa-arrow-down"></i>
-          {" expand"}
-       </div>
+        <span className="showhide-control">
+          {"Show more text..."}
+       </span>
       );
     }
   }
