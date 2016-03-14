@@ -1,6 +1,13 @@
 import Images from "../images/images";
 
 let eastBostonStories = {
+  "east_boston": {
+    title: "East Boston",
+    type: "neighborhood",
+    Latitude: 42.37,
+    Longitude: -71.03,
+    story: `Based on many stories we’ve heard from the frontlines of evictions and rent-increases in Boston, East Boston is one of the hardest-hit neighborhoods. Large corporate landlords like Hodara Real Estate Group, Newman Properties, RJ Leyden and Aaron Daigneault are buying and redeveloping scores of homes throughout East Boston, raising rents and forcing no-fault evictions in process, while 2016 began with over 10 larger high-end housing developments underway.`
+  },
   "chelsea_st_1": {
     title: "Marta, Ruth, and Margarita",
     owner: "Newman Properties",

@@ -2,6 +2,7 @@ import React from "react";
 import { render } from "react-dom";
 import StoryContainerNav from "./story_container_nav";
 import StoryContent from "./story_content";
+import Neighborhood from "./neighborhood";
 
 class StoryContainer extends React.Component {
   constructor (props) {
@@ -19,11 +20,15 @@ class StoryContainer extends React.Component {
       <div className="story-container">
         <StoryContainerNav {...this.props} />
         <div className="story-content-wrapper">
-          <StoryContent {...this.props} />
+          {this.pickContentWrapper()}
         </div>
       </div>
     );
   }
+
+  pickContentWrapper = () => (
+    this.props.story.type === "story" ? <StoryContent {...this.props} /> : <Neighborhood {...this.props} />
+  );
 }
 
 export default StoryContainer;
