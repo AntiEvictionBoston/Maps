@@ -4,12 +4,15 @@ import { createStore, combineReducers } from "redux";
 import { Provider } from "react-redux";
 import { Router, Route, hashHistory } from "react-router";
 
+import arrayIncludesPolyfill from "./util/array_includes";
 import StoryMap from "components/story_map";
 import eastBostonStories from "./data/east_boston_stories";
 import updateMapState from "./reducers/reducers";
 import * as actions from "./actions/actions";
 import awesomeMarkers from "./util/leaflet.awesome-markers";
 require("./stylesheets/main.scss");
+
+arrayIncludesPolyfill();
 
 // check for different divs, render the appropriate map
 let domElement = document.getElementById('east_boston_tenant_association_map');
