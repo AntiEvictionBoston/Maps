@@ -37,8 +37,12 @@ class StoryMarker extends React.Component {
     this.isActive() ? this.activeIcon() : this.inactiveIcon()
   );
 
-  activeIcon = () => this.faIcon('home', 'red');
-  inactiveIcon = () => this.faIcon('home', 'blue');
+  activeIcon = () => this.faIcon(this.pickSymbol(), 'red');
+  inactiveIcon = () => this.faIcon(this.pickSymbol(), 'blue');
+
+  pickSymbol = () => (
+    this.props.story.type === "story" ? 'home' : 'star'
+  );
 
   isActive = () => (
     this.props.currentUrl === this.props.urlForStory
