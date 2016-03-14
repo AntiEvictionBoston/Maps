@@ -6,10 +6,12 @@ let eastBostonStories = {
     type: "story",
     center: [42.37, -71.03],
     units: 7,
+    rent: "$300",
+    story: `Thirty-one tenants, including 8 children, were displaced when the back wall of their adjacent buildings partially collapsed (shortly prior to the collapse, they had received a rent increase). After months of living in hotels, several families took refuge in the basement of Our Saviour's Lutheran Church nearby. One family continues to live in the church 7 months after the collapse. The owner would not rehabilitate the apartments for the tenants who lived there.`
     Latitude: 42.369521,
     Longitude: -71.037244,
     images: [
-      Images.images.maverickStreet17
+      Images.images.maverickstreet171
     ],
     video: "uinevl-LnTI"
   },
