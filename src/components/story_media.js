@@ -12,9 +12,9 @@ class StoryMedia extends React.Component {
     );
   }
 
-  static defaultProps = {
-    show: false
-  };
+  componentWillMount () {
+    this.setState({ show: false });
+  }
 
   renderImages () {
     var images = [];
