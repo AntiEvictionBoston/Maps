@@ -28,31 +28,52 @@ body {
   font-weight: $font-weight-regular;
 }
 
+#east_boston_tenant_association_map {
+  height: 100vh;
+}
+
+#map-container {
+  position: relative;
+  height: 100%; // make the container height 100% of it's containing element
+}
+
 @media screen and (max-width: 768px){
-  #map-container {
-    #map-sidebar {
-      height: 66vh;
-    }
+  
+  // map on top
+  .leaflet-container {
+    height: 33%;
   }
 
+  // sidebar on the bottom
+  #map-sidebar {
+    height: 66%;
+  }
+
+}
+
+@media screen and (min-width: 769px) {
+
+  // map on the left
   .leaflet-container {
-    height: 33vh;
+    height: 100%; // reset height
+    margin-right: 360px; // room for sidebar    
+  }
+  
+  // sidebar on the right, fixed width
+  #map-sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 360px;
+    height: 100%;
   }
 }
 
-@media screen and (min-width: 769px){
-  #map-container {
-    #map-sidebar {
-      width: 34%;
-      float: right;
-      height: 100vh;
-      position: relative;
-    }
+@media screen and (min-width: 1024px) {
+  #map-sidebar {
+    width: 480px; // bigger sidebar on larger screens
   }
-
   .leaflet-container {
-    height: 98vh;
-    width: 66%;
-    float: left;
+    margin-right: 480px;
   }
 }
