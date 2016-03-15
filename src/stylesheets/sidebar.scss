@@ -6,22 +6,22 @@
 
   #left-nav-button {
     float: left;
-    padding-left: 5px;
+    padding-left: $spacing-unit/4;
   }
 
   #right-nav-button {
     float: right;
-    padding-right: 5px;
+    padding-right: $spacing-unit/4;
   }
 
   #title {
     text-align: center;
     display: inline-block;
     width: 85%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: $spacing-unit/2;
+    margin-bottom: $spacing-unit/2;
     color: $font-white;
-    font-size: 1.25em;
+    font-size: $base-font-size*1.125;
   }
 
   i {
@@ -36,7 +36,7 @@
 
 #map-sidebar {
   position: relative;
-  font-family: $font__family;
+  font-family: $base-font-family;
 }
 
 .story-content-wrapper {
@@ -93,7 +93,7 @@
     
     #rent-row td:first-child {
       color: $eviction-red;
-      font-weight: $font__weight-bold;  
+      font-weight: $font-weight-bold;  
     }
   }
 
@@ -110,7 +110,7 @@
         display: inline-block;
         transition: all ease 400ms;
         background: $eviction-red;
-        font-weight: $font__weight-bold;
+        font-weight: $font-weight-bold;
         font-size: 18px;
         border: 0;
         margin: 0;
@@ -131,8 +131,13 @@
     }
     .showhide-control {
       color: $link-color;
-      font-weight: $font__weight-bold;
+      font-weight: $font-weight-bold;
       cursor: pointer;
+    }
+    .media-row {
+      margin-right: 0;
+    	margin-left: 0;
+    	margin-bottom: $spacing-unit/2;
     }
     #video .media-row {
     	position: relative;
