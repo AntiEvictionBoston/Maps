@@ -6,7 +6,10 @@ let eastBostonStories = {
     type: "neighborhood",
     Latitude: 42.37,
     Longitude: -71.03,
-    story: `Based on many stories we’ve heard from the frontlines of evictions and rent-increases in Boston, East Boston is one of the hardest-hit neighborhoods. Large corporate landlords like Hodara Real Estate Group, Newman Properties, RJ Leyden and Aaron Daigneault are buying and redeveloping scores of homes throughout East Boston, raising rents and forcing no-fault evictions in process, while 2016 began with over 10 larger high-end housing developments underway.`
+    story: `Based on many stories we’ve heard from the frontlines of evictions and rent-increases in Boston, East Boston is one of the hardest-hit neighborhoods. Large corporate landlords like Hodara Real Estate Group, Newman Properties, RJ Leyden and Aaron Daigneault are buying and redeveloping scores of homes throughout East Boston, raising rents and forcing no-fault evictions in process, while 2016 began with over 10 larger high-end housing developments underway.`,
+    images: [
+      Images.images.east_boston
+    ]
   },
   "chelsea_st_1": {
     title: "Marta, Ruth, and Margarita",
@@ -97,7 +100,10 @@ let eastBostonStories = {
     type: "neighborhood",
     Latitude: 42.35,
     Longitude: -71.06,
-    story: `In Chinatown, rents are jumping so quickly that some residents worry the entire community will be displaced in the not-too-distant future, leaving behind “Chinatown” only in name. These are stories from a neighborhood struggling to hold ground.`
+    story: `In Chinatown, rents are jumping so quickly that some residents worry the entire community will be displaced in the not-too-distant future, leaving behind “Chinatown” only in name. These are stories from a neighborhood struggling to hold ground.`,
+    images: [
+      Images.images.chinatown
+    ]
   },
   "johnny_ct_1": {
     title: "Ms. Huang and Ms. Zhong",
@@ -153,7 +159,10 @@ let eastBostonStories = {
     type: "neighborhood",
     Latitude: 42.31,
     Longitude: -71.10,
-    story: `As a “master plan” for rezoning the Corridor is drafted, here are stories of lower-income families of color squeezed out of Egleston Square, Dudley Square, and Forest Hills. Many are organizing to remain in place. `
+    story: `As a “master plan” for rezoning the Corridor is drafted, here are stories of lower-income families of color squeezed out of Egleston Square, Dudley Square, and Forest Hills. Many are organizing to remain in place. `,
+    images: [
+      Images.images.wash_corridor
+    ]
   },
   "ruggles_st_1": {
     title: "Felicha, Purple, and Alzina",
@@ -222,7 +231,10 @@ let eastBostonStories = {
     type: "neighborhood",
     Latitude: 42.266,
     Longitude: -71.110,
-    story: `These stories come mainly from the tenants of large corporate landlords in this area. Advanced Property Management, for example, owns over 300 apartments in this area and has issued rent increases of over $500 per month.`
+    story: `These stories come mainly from the tenants of large corporate landlords in this area. Advanced Property Management, for example, owns over 300 apartments in this area and has issued rent increases of over $500 per month.`,
+    images: [
+      Images.images.hyde_mattapan
+    ]
   },
   "river_st_1": {
     title: "Canute",

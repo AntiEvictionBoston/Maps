@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import { Link } from "react-router";
+import StoryMedia from "./story_media";
 
 class Neighborhood extends React.Component {
   constructor (props) {
@@ -16,9 +17,7 @@ class Neighborhood extends React.Component {
   render () {
     return (
       <div id="story-content">
-        <div id="story-text">
-          {this.props.story.story}
-        </div>
+        <StoryMedia {...this.props} />
         <div id="neighborhood-button">
           <button className="Neighborhood-next-button">
             <Link to={this.props.next}>
