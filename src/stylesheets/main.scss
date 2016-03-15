@@ -1,8 +1,10 @@
 // Variables
-$font__family: "Lato", "Helvetica", "Arial", sans-serif;
-$font__weight-regular: 400;
-$font__weight-light: 300;
-$font__weight-bold: 900; 
+$base-font-family: "Lato", "Helvetica", "Arial", sans-serif;
+$base-font-size: 16px;
+$base-line-height: 1.5em;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+$font-weight-bold: 900;
 
 $spacing-unit: 24px;
 
@@ -18,6 +20,12 @@ html, body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+}
+
+body {
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-weight: $font-weight-regular;
 }
 
 @media screen and (max-width: 768px){
