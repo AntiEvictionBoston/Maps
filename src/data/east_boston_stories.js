@@ -190,7 +190,7 @@ let eastBostonStories = {
     images: [],
   },
   "washington_street_1": {
-    title: "Marvin Mendoza",
+    title: "Marvin",
     owner: "N/A",
     type: "story",
     center: [42.37, -71.03],
