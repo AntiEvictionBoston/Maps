@@ -4,6 +4,7 @@ import { createStore, combineReducers } from "redux";
 import { Provider } from "react-redux";
 import { Router, Route, hashHistory } from "react-router";
 
+import HashbangLocation from "./util/hashBangLocation";
 import arrayIncludesPolyfill from "./util/array_includes";
 import StoryMap from "components/story_map";
 import eastBostonStories from "./data/east_boston_stories";
@@ -28,7 +29,7 @@ if (domElement) {
 
   render(
     <Provider store={store}>
-      <Router history={hashHistory}>
+      <Router history={HashbangLocation}>
         <Route path="/" component={StoryMap}>
           <Route path="/:address" />
         </Route>
