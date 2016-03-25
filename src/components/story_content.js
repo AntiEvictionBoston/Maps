@@ -9,6 +9,8 @@ class StoryContent extends React.Component {
         {this.basicInfo()}
 
         <StoryMedia {...this.props} />
+        
+        {this.callToAction()}
       </div>
     );
   }
@@ -36,6 +38,15 @@ class StoryContent extends React.Component {
         </tbody>
       </table>
     );
+  }
+  
+  callToAction () {
+    return (
+      <div className="call-to-action">
+        <h3>Want to support this household?</h3>
+        <a href="http://www.bostondisplacement.org/take-action/" target="_blank">Call</a> or <a href="http://www.bostondisplacement.org/take-action/" target="_blank">write</a> your City Councillor today and tell them that tenants need better protections from evictions for profit. Or <a href="http://www.justcauseboston.org/sign_the_petition" target="_blank" title="Sign a petition supporting a Just Cause Eviction Ordinance">sign the petition</a>.
+      </div>
+    )
   }
 }
 
