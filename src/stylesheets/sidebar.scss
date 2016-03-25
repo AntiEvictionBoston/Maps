@@ -45,7 +45,8 @@
   right: 0;
   left: 0;
   bottom: 0;
-  overflow: auto;
+  overflow-y: scroll; /* has to be scroll, not auto. See: https://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/ */
+  -webkit-overflow-scrolling: touch;
 }
 
 #story-content {
@@ -55,6 +56,23 @@
   img {
     width: 100%;
     height: auto;
+  }
+
+  h3 {
+    font-size: $base-font-size*1.5;
+    font-weight: $font-weight-light;
+  }
+
+  a,
+  %link {
+    color: $link-color;
+    font-weight: $font-weight-bold;
+    text-decoration: none;
+    transition: all ease 200ms;
+    &:hover {
+      color: darken($link-color, 20%);
+      text-decoration: underline;
+    }
   }
 
   $table-border-style: 1px solid $background-grey;
@@ -130,8 +148,7 @@
       display: none;
     }
     .showhide-control {
-      color: $link-color;
-      font-weight: $font-weight-bold;
+      @extend %link;
       cursor: pointer;
     }
     .media-row {
@@ -153,6 +170,8 @@
     	height: 100%;
     }
   }
+  
+  
 }
 
 // mobile specific styling
