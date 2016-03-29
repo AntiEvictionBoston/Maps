@@ -52,12 +52,13 @@ let eastBostonStories = {
     owner: "RJ Leyden LLC",
     type: "story",
     center: [42.37, -71.03],
-    rent: "$600",
-    video: "EVw5TbXLZzE",
-    story: `Natalia, one of the tenants in this building, has lived in East Boston for 15 years and has lived on Gove St. for about 14 of those years. First, Natalia and the other tenants here received rent increases - Natalia's increase was $600 a month. After that, "We received a 14-day eviction notice," says Natalia. The owner apparently wanted to "clear out" the building.`,
+    rent: "$425",
+    story: `Natalia, one of the tenants in this building, has lived in East Boston for 15 years and has lived on Gove St. for about 14 of those years. First, Natalia and the other tenants in this building received rent increases—Natalia's increase was $425 a month. Later, the tenants in the building received 30-day no-fault eviction notices.`,
     Latitude: 42.370093,
     Longitude: -71.033843,
-    images: [],
+    images: [
+      Images.images.gove_natalia
+    ],
   },
   "maverick_st_2": {
     title: "Idalia",
