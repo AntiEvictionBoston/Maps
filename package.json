@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/antievictionboston/leafletmap#readme",
   "dependencies": {
+    "express": "^4.13.4",
     "leaflet": "^0.7.7",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
