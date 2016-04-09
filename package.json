@@ -5,10 +5,11 @@
   "main": "east_boston.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --progress --colors --hot",
-    "dev_build": "webpack --progress --profile --colors",
+    "start": "node app.js",
+    "dev-start": "webpack-dev-server --progress --colors --hot",
+    "dev-build": "webpack --progress --profile --colors",
     "lint": "eslint ./src; exit 0",
-    "build": "NODE_ENV=production webpack -p --progress --colors"
+    "postinstall": "NODE_ENV=production webpack -p --progress --colors"
   },
   "repository": {
     "type": "git",
