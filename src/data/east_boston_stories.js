@@ -221,7 +221,7 @@ let eastBostonStories = {
     type: "story",
     center: [42.37, -71.03],
     rent: "$300",
-    video: "LdGIv7yRcZA",
+    video: "gkzVdEYBCKA",
     story: `This building is home to 5 single parents and their kids. They received rent increases of $300 per month per unit. Then they received no-fault eviction notices. They've united in the face of their landlord's attempt to "clear-out" their building. They have built community watching each other's children and supporting each other while their housing is unstable. `,
     Latitude: 42.292612,  
     Longitude: -71.122229,
