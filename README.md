@@ -1,9 +1,9 @@
-#Maps
+# Maps
 
 The maps! They're written with Leaflet and React, and bundled together
 with Webpack.
 
-##Development
+## Development
 
 We're using webpack to bundle up the maps, which means you need to install
 a giant pile of things for development. To fiddle with the development
@@ -23,7 +23,7 @@ npm run-script build
 
 It should be fine on any `npm` >= 3.
 
-##Updating the utility repo
+## Updating the utility repo
 
 There's a [utility repo](https://github.com/AntiEvictionBoston/utility)
 which we're using as a makeshift CDN. There's
