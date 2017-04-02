@@ -26,7 +26,13 @@ class Images {
     rosastreet2: "https://cdn.rawgit.com/AntiEvictionBoston/utility/7a192a21ba9eca6391e08114eae87a5083dc0061/images/rosa-street-2.jpeg",
     chinatown: "https://cdn.rawgit.com/AntiEvictionBoston/utility/2991a68a06316f83a7bfaa73b69c76d43195cc7b/images/neighborhoods/chinatown.jpg",
     hyde_mattapan: "https://cdn.rawgit.com/AntiEvictionBoston/utility/2991a68a06316f83a7bfaa73b69c76d43195cc7b/images/neighborhoods/hyde_mattapan.jpg",
-    wash_corridor: "https://cdn.rawgit.com/AntiEvictionBoston/utility/2991a68a06316f83a7bfaa73b69c76d43195cc7b/images/neighborhoods/wash_corridor.jpg"
+    wash_corridor: "https://cdn.rawgit.com/AntiEvictionBoston/utility/2991a68a06316f83a7bfaa73b69c76d43195cc7b/images/neighborhoods/wash_corridor.jpg",
+    waldeckstreet1: "https://cdn.rawgit.com/AntiEvictionBoston/utility/455f0f50/images/waldeckstreet1.jpg",
+    orlandostreet1: "https://cdn.rawgit.com/AntiEvictionBoston/utility/455f0f50/images/orlandostreet1.jpg",
+    sumnerstreet1: "https://cdn.rawgit.com/AntiEvictionBoston/utility/455f0f50/images/sumnerstreet1.jpg",
+    homesteadstreet1: "https://cdn.rawgit.com/AntiEvictionBoston/utility/455f0f50/images/homesteadstreet1.jpg",
+    hudsonstreet1: "https://cdn.rawgit.com/AntiEvictionBoston/utility/455f0f50/images/hudsonstreet1.jpg",
+    tylerstreet1: "https://cdn.rawgit.com/AntiEvictionBoston/utility/455f0f50/images/tylerstreet1.jpg",
   }
 
   static eagerLoad = () => {
